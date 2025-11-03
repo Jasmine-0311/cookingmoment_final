@@ -1,0 +1,209 @@
+.product_card {
+  width: 351px;
+  height: 372px;
+  border-radius: 10px;
+  background-color: $bg-card;
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: grab;
+  overflow: hidden;
+  box-sizing: border-box;
+  img {
+    width: 351px;
+    height: 292px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }  
+.body {
+    padding: 16px;
+    width: 100%;
+    height: 304px;
+    display: block;
+    .inner-width {
+      width: 225px;
+    }
+    .description-height {
+      height: 140px;
+    }
+    .limit-length {
+      @include text-multiline-truncate(
+        $font-size: 16px,
+        $line-height: 1.5,
+        $max-line-Number: 2
+      );
+    }
+  }
+  @include media-breakpoint-up(md) {
+    width: 306px;
+    height: 501px;
+    .pdc_img {
+        width: 306px;
+      height: 292px;
+    }
+    .body {
+      width: 300 px;
+      height: 200 px;
+      .inner-width {
+        width: 274px;
+      }
+      .description-height {
+        height: 48px;
+      }
+    }
+     .limit-length {
+      @include text-multiline-truncate(
+        $font-size: 16px,
+        $line-height: 1.5,
+        $max-line-Number: 2
+      );
+    }
+  }
+
+ img {
+    width: 351px;
+    height: 292px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+}
+
+ .pd-SearchBar {
+    position: relative;
+    width: 420px;       
+    height: 36px;
+    margin: 0 auto;
+    border: 1px solid $border-color;
+    border-radius: 800px;
+    color-scheme: grey;
+
+     i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #5C7C5F;    // icon 顏色
+      font-size: 1.1rem;
+    }
+ }
+  .pd-SearchInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 800px;
+  padding-left: 42px; // 預留 icon 空間
+  font-size: 16px;
+  color:$grey;
+  outline: none;
+  background: transparent;
+
+  &::placeholder {
+    color: #999;
+  }
+}
+ 
+ @media (max-width: 768px) {
+  .pd-SearchBar {
+    width: 90%;
+  }
+}
+.breadcrumb{
+  --bs-breadcrumb-divider: '>';
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: $text-grey;
+  a {
+    color: $text-grey;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    breadcrumb-item{
+      font-size: 16px;
+    }
+  }
+}
+.pdc_link{
+  text-decoration: none;
+
+}
+
+.btn-group .btn {
+  border-radius: 10px;
+  font-weight: 196px;
+  padding: 8px 33px;
+  font-weight: 400;
+  line-height: 1.5;
+ font-size: 16px; 
+}
+
+.filter-btn{
+  border: none;
+  background: $bg-grey;
+}
+.filter-btn-tag{
+  padding: 4px 12px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.filter-group{
+a{
+text-decoration: none;
+color: $text-grey;
+font-size: 20px;
+line-height: 150%;
+font-weight: 400;
+}
+ &:hover {
+      color: $primary;
+    }
+
+.filter-Chosed{
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+  color:#5C7C5F
+}
+}
+
+.PageBtn {
+  
+  color: $text-grey;
+  border: none;
+  text-align: center;
+  font-weight: 400;
+  line-height: 150%;
+
+ 
+  a{
+    text-decoration: none;
+    color: $text-grey;
+    height: 40px;
+    width: 40px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    
+  }
+  .active{ 
+      height: 40px;
+    width: 40px;
+  background: $primary;
+  color: #FFFFFF;
+  border-radius: 100%;
+  border: 1px solid $primary;
+}
+ .disabled  {
+    color: #ccc;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,131 @@
+
+.CartCard-head{
+    background-color: $primary;
+color: white;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+padding-top: 8px;
+padding-bottom: 8px;
+}
+.accordion-button {
+  box-shadow: none !important;
+}
+
+.CartCard-body{
+    background-color: $white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+     border-bottom-left-radius:12px ;
+    border-bottom-right-radius:12px ;
+    border: 1px solid #E5E5E5;
+}
+   
+.qty{
+    width: 98px;
+    height: 40px;
+    border: 1px solid #E5E5E5;
+
+}
+
+
+    .qty-minus, .qty-plus{
+        width: 48px;
+        height: 40px;
+        border: none;
+        font-size: 20px;
+        color: $text-grey;
+       
+    }
+    .ms-md-16{
+        padding-left: 48px;
+    }
+
+    
+   
+  .accordion-button {
+  display: flex;
+  align-items: center;     /* 垂直置中 */
+  justify-content: flex-end; /* 讓文字與箭頭靠右排 */
+  padding-right: 56px;     /* 微調右邊間距 */
+}
+
+.accordion-button::after {
+  margin-left: 12px;     /* 調整文字與箭頭距離 */
+  transform: translateY(1px); /* 讓箭頭微微下移對齊文字基線 */
+}
+// 自定義手風琴樣式
+
+#deliverySection .accordion-button {
+  background-color: #F4F5F7;   /* 淺灰背景 */
+  color: #111111;
+    border: none;
+  box-shadow: none;
+    display: flex;
+  align-items: center;     /* 垂直置中 */
+  justify-content: center; 
+}
+ 
+
+
+#deliverySection .accordion-button:not(.collapsed) {
+  background-color: #F4F5F7;   /* 展開時顏色 */
+    color: #111111;
+    border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;     /* 垂直置中 */
+  justify-content: center;
+}
+
+#deliverySection .accordion-item {
+ 
+ 
+  margin-bottom: 8px;
+  box-shadow: none;
+  border: none;
+
+}
+
+
+
+
+#deliverySection .accordion-button::after {
+  /* 你也可以在這裡調整右邊箭頭 */
+  transform: translateY(1px);
+  margin-left: 8px;
+}
+
+.acCard-border {
+  border-radius: 0; // 先清除預設圓角
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid #E5E5E5;
+  border-top-left-radius: 0%;
+    border-top-right-radius: 0%; 
+}
+
+//左下卡片
+.BuyNote-card{
+   
+  max-width: 856px;
+    min-height: 608px;
+    background-color: #F4F5F7;
+    padding: 20px 24px;
+}
+
+//右下卡片
+.OrderSummary-card{
+   max-width: 415px;
+    min-height: 384px;
+    background-color: #F4F5F7;
+    padding: 20px 24px;
+    box-sizing: border-box;
+}
+
+.btn small{
+    width: 172px;
+    height: 48px;
+    font-size: 20px;
+    font-style: bold;
+    line-height: 1.2;
+}
