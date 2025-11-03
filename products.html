@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/cookingmoment_final/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>產品列表</title>
+    <script type="module" crossorigin src="/cookingmoment_final/assets/main-fkhkrjp7.js"></script>
+    <link rel="stylesheet" crossorigin href="/cookingmoment_final/assets/main-B3nhSUUV.css">
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header fixed-top">
+  <div class="container position-relative">
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <!-- 左方logo -->
+      <div>
+        <a class="py-6 d-block d-md-none" href="">
+          <img src="/cookingmoment_final/assets/logo_small-dqC3dKT1.png" alt="此食此刻Logo 小" />
+        </a>
+        <a class="navbar-brand py-md-0 d-none d-md-block" href="./index.html">
+          <img src="/cookingmoment_final/assets/logo_big-CjHlcHsX.png" alt="此食此刻Logo 大" />
+        </a>
+      </div>
+
+      <!-- 中間自適應的div -->
+      <div class="flex-grow-1 mx-2 d-none d-md-block">
+        <div class="">
+          <ul
+            class="list-unstyled d-flex justify-content-evenly h5 text-primary"
+          >
+            <li>
+              <a class="text-decoration-none" href="https://jasmine-0311.github.io/CookingMoment/products.html">探索料理</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="#">餐桌故事</a>
+            </li>
+            <li>品牌故事</li>
+            <li>
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 右側 購物車、人像、menu漢堡按鈕 -->
+      <div class="d-flex align-items-center ">
+        <!-- 購物車 -->
+        <div class="position-relative pt-3 ">
+           <a href="https://jasmine-0311.github.io/CookingMoment/shoppingcart.html">
+          <span class="icon-cart mx-7 pt-5 z-2"></span>
+          <span
+            class="position-absolute bg-Accent text-white cart-tag rounded-pill py-1 px-2"
+            id="header-order-qty"
+          >
+            2
+          </span>
+         </a>
+        </div>
+
+        <!-- 人像 & user alias-->
+        <div
+          class="mx-7 flex-row"
+          id="header-login-status"
+          data-logined="true"
+          data-bs-target="#userOffCanvas"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div id="header-avatar" class="d-block">
+            <img
+              src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+              class="avatar rounded-circle"
+              alt="user avatar"
+            />
+            <span class="fs-7 text-primary">Jenny</span>
+          </div>
+          <a
+            href="#"
+            class="Body2 text-secondary text-decoration-none d-none"
+            id="header-toLogin"
+            >會員登入</a
+          >
+        </div>
+
+        <!-- menu 小版之下拉 功能清單 -->
+        <div class="mx-7 d-block d-md-none">
+          <button
+            class="border-0"
+            type="button"
+            id="header-menu-btn"
+            data-bs-toggle="dropdown"
+          >
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" id="header-menu-list">
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="https://jasmine-0311.github.io/CookingMoment/products.html">探索料理</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">品牌故事</li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- user profile  offcanvas  -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="header-userOffCanvas"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="p-10 d-flex justify-content-end">
+    <button
+      type="button"
+      id="header-close-usercanvas"
+      class="btn-close p-5 fs-8"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-7">
+    <div class="d-flex mb-5">
+      <img
+        src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+        alt="user picture"
+        class="d-block my-2 me-2 avatar border-1"
+      />
+      <div class="mb-10">
+        <p class="fs-7 text-primary fw-bolder m-0">Jessica</p>
+        <p class="fs-7 text-secondary">jenny@gamil.com</p>
+      </div>
+    </div>
+    <div class="h5 text-primary">
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> article </span>
+        <span class="">訂單管理</span>
+      </div>
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> favorite </span>
+        <span class="">我的收藏</span>
+      </div>
+      <div class="py-4">
+        <span class="material-icons-outlined align-bottom"> settings </span>
+        <span class="">帳號設定</span>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-footer p-7">
+    <div class="h5 py-4 text-primary">
+      <a href="" class="text-decoration-none" id="user-logout">
+        <span class="material-symbols-outlined"> logout </span>
+        <spanfs-8>登出</spanfs-8>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container heading_top_offset mb-14 mb-md-22">
+    <div class="row g-0">
+
+       <div class="col-12 mb-30">
+ <!-- 麵包屑 -->
+   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+    <li class="breadcrumb-item text-primary active" aria-current="page">探索料理</li>
+  </ol>
+</nav>
+
+        <h2 class="h-md-2 text-center mb-8 mb-md-16">一起開煮吧</h2>
+      <!-- 搜尋欄位 -->
+      <div class="pd-SearchBar mb-8 mx-auto">
+       <i class="bi bi-search"></i>
+  <input type="search" class="form-control pd-SearchInput" placeholder="輸入想找的食譜或食材吧" aria-label="Search">
+</div>
+
+</div>
+  <!-- 左邊 -->
+
+        <div class="col-4 col-lg-3 mb-4">
+
+    <!-- 已選條件 -->
+     <div class="d-flex justify-content-between align-items-baseline">
+       <h5 class="h-md-4 text-primary ">已選擇條件</h5>
+<p class="text-text-grey text-decoration-underline">全部清除</p>
+     </div>
+<div class="d-flex flex-wrap g-0">
+   <button type="button" class="filter-btn text-text-grey rounded-pill px-md-6 py-md-2 px-3 py-2 mx-md-4 my-md-4">
+    <i class="bi bi-x me-1 text-text-grey"></i>湯品</button>
+     <button type="button" class="filter-btn text-text-grey rounded-pill px-md-6 py-md-2 px-3 py-2 mx-md-4 my-md-4">
+    <i class="bi bi-x me-1 text-text-grey"></i>主菜</button>
+  <button type="button" class="filter-btn text-text-grey rounded-pill px-md-6 py-md-2 px-3 py-2 mx-md-4 my-md-4">
+    <i class="bi bi-x me-1 text-text-grey"></i>健身餐</button>
+     <button type="button" class="filter-btn text-text-grey rounded-pill px-md-6 py-md-2 px-3 py-2 mx-md-4 my-md-4">
+    <i class="bi bi-x me-1 text-text-grey"></i>7人以上</button>
+      <button type="button" class="filter-btn text-text-grey rounded-pill px-md-6 py-md-2 px-3 py-2 mx-md-4 my-md-4">
+    <i class="bi bi-x me-1 text-text-grey"></i>40分鐘以上</button>
+     <button type="button" class="filter-btn text-text-grey rounded-pill px-md-6 py-md-2 px-3 py-2 mx-md-4 my-md-4">
+    <i class="bi bi-x me-1 text-text-grey"></i><span class="rating-stars pt-6" data-rating="3"></span></button>
+
+</div>
+
+<hr class="border border-grey opacity-50 mt-md-16">
+
+<!-- 區塊 1：料理類型 -->
+    <div class="filter-group pb-3 mb-4 mb-md-14  ">
+      <h6 class="h4 text-primary mb-md-6">料理類型</h6>
+      <ul class="list-unstyled mb-0 mx-md-14 ">
+        <li class="mb-2 mb-md-4 "><a href="#">家常料理</a></li>
+        <li class="mb-2 mb-md-4 "><a href="#">湯品</a></li>
+        <li class="mb-2 pb-md-4"><a href="#" class="filter-Chosed">主菜</a></li>
+         <li class="mb-2 pb-md-4"><a href="#">醬料</a></li>
+          <li><a href="#">其他</a></li>
+      </ul>
+    </div>
+
+    <!-- 區塊 2：食材類型 -->
+    <div class="filter-group pb-3 mb-4 mb-md-14  ">
+      <h6 class="h4 text-primary mb-md-6">食材種類</h6>
+      <ul class="list-unstyled mb-0 mx-md-14 ">
+        <li class="mb-2 mb-md-4 "><a href="#">牛肉</a></li>
+        <li class="mb-2 mb-md-4 "><a href="#">豬肉</a></li>
+        <li class="mb-2 pb-md-4"><a href="#">雞肉</a></li>
+         <li class="mb-2 pb-md-4"><a href="#">海鮮</a></li>
+         <li class="mb-2 pb-md-4"><a href="#">蔬菜</a></li>
+          <li><a href="#" class="filter-Chosed">全部</a></li>
+      </ul>
+    </div>
+     <!-- 區塊 3：飲食需求 -->
+    <div class="filter-group pb-3 mb-4 mb-md-14  ">
+      <h6 class="h4 text-primary mb-md-6">飲食需求</h6>
+      <ul class="list-unstyled mb-0 mx-md-14 ">
+        <li class="mb-2 mb-md-4 "><a href="#">素食</a></li>
+        <li class="mb-2 mb-md-4 "><a href="#">蔬食</a></li>
+        <li class="mb-2 pb-md-4"><a href="#" class="filter-Chosed">健身餐</a></li>
+         <li class="mb-2 pb-md-4"><a href="#">地中海料理</a></li>
+         <li class="mb-2 pb-md-4"><a href="#">生酮飲食</a></li>
+          <li><a href="#" >其他</a></li>
+      </ul>
+    </div>  
+    <!-- 區塊 4：難度 -->
+    <div class="filter-group pb-3 mb-4 mb-md-14  ">
+      <h6 class="h4 text-primary mb-md-6">烹飪難度</h6>
+          <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="hard" id="hard5">
+        <label class="form-check-label" for="hard5">
+        <span class="rating-stars pt-6" data-rating="5"></span>
+        </label>
+      </div>
+      <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="hard" id="hard4" checked>
+        <label class="form-check-label" for="hard4">
+        <span class="rating-stars pt-6" data-rating="4"></span>
+        </label>
+      </div>
+       <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="hard" id="hard3" checked>
+        <label class="form-check-label" for="hard3">
+        <span class="rating-stars pt-6" data-rating="3"></span>
+        </label>
+      </div>
+       <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="hard" id="hard2" checked>
+        <label class="form-check-label" for="hard2">
+        <span class="rating-stars pt-6" data-rating="2"></span>
+        </label>
+      </div>
+       <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="hard" id="hard1" checked>
+        <label class="form-check-label" for="hard1">
+        <span class="rating-stars pt-6" data-rating="1"></span>
+        </label>
+      </div>
+    </div>  
+
+     <!-- 區塊 5：人數 -->
+    <div class="filter-group pb-3 mb-4 mb-md-14  ">
+      <h6 class="h4 text-primary mb-md-6">用餐人數</h6>
+          <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="people" id="people5">
+        <label class="form-check-label" for="people5">
+        1-3人
+        </label>
+      </div>
+      <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="people" id="people4" checked>
+        <label class="form-check-label" for="people4">
+       4-6人
+        </label>
+      </div>
+       <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="people" id="people3" checked>
+        <label class="form-check-label" for="people3">
+      7人以上
+        </label>
+      </div>  
+    </div>
+    <!-- 區塊 5：時間 -->
+    <div class="filter-group pb-3 mb-4 mb-md-14  ">
+      <h6 class="h4 text-primary mb-md-6">烹飪時間</h6>
+          <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="time" id="time5">
+        <label class="form-check-label" for="time5">
+      20分鐘內
+        </label>
+      </div>
+      <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="time" id="time4" checked>
+        <label class="form-check-label" for="time4">
+       20-40分鐘
+        </label>
+      </div>
+       <div class="form-check mx-md-14 mb-md-4">
+        <input class="form-check-input" type="radio" name="time" id="time3" checked>
+        <label class="form-check-label" for="time3">
+      40分鐘以上
+        </label>
+      </div>   
+    </div> 
+</div>
+
+    <!-- 右邊 -->
+
+ <div class="col-md-10 col-lg-9 mb-14">
+
+<div class="d-flex justify-content-end align-items-baseline mb-8 mb-md-20 ">
+  <p class="text-text-grey mx-md-12 ">顯示結果<span class="fw-bold text-text">24</span> 個食譜</p>
+
+  <!-- 標籤按鈕-->
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="btnradio1">熱門</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btnradio2">最新</label>
+</div>
+</div>
+
+<div class="row g-4 g-md-5">
+  <!-- 1st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/recipe1-H3a8TTn0.jpg" alt="檸檬迷迭香烤雞腿排"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">檸檬迷迭香烤雞腿排</div>
+            <div class=" text-text-grey limit-length ">
+            外皮酥香、肉質鮮嫩，佐以檸檬的清爽與迷迭香的芳香，簡單烘烤就能端上餐桌的經典家常菜。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="3"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">20分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 2st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="https://jessie0323.github.io/CookingMoment/recipes.html" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-DBAHWz76.png" alt="檸香烘烤雞腿"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">檸香烘烤雞腿</div>
+            <div class=" text-text-grey limit-length ">
+            外皮酥香、肉質鮮嫩，佐以檸檬的清爽與迷迭香的芳香，簡單烘烤就能端上餐桌的經典家常菜。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="3"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">20分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 3st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-1-CAP8Cmhs.png" alt="檸香奶油煎鮭魚"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">檸香奶油煎鮭魚</div>
+            <div class=" text-text-grey limit-length ">
+            外皮酥香、肉質鮮嫩，佐以檸檬的清爽與迷迭香的芳香，簡單烘烤就能端上餐桌的經典家常菜。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="3"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">20分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 4st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-2-B9bhMkmG.png" alt="黑胡椒蜜汁豬排"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">黑胡椒蜜汁豬排</div>
+            <div class=" text-text-grey limit-length ">
+            外層香煎鎖汁，淋上香甜微辣的黑胡椒蜜汁，口感濃郁又下飯。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="4"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">40分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 5st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-3-CFw6wnOm.png" alt="香草烤羊排"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">香草烤羊排</div>
+            <div class=" text-text-grey limit-length ">
+            鮮嫩多汁的羊排佐以迷迭香與百里香烘烤，香氣四溢，入口回甘。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="5"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">40分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">4人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 6st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-4-BQwBzlXz.png" alt="韓式泡菜炒豬肉"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">韓式泡菜炒豬肉</div>
+            <div class=" text-text-grey limit-length ">
+            微辣泡菜搭配鮮嫩豬肉，開胃又下飯，香氣撲鼻。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="4"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">20分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 7st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-5--JoXpYLN.png" alt="香煎干貝佐檸檬奶油醬"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">香煎干貝佐檸檬奶油醬</div>
+            <div class=" text-text-grey limit-length ">
+            干貝煎至金黃焦香，搭配清爽檸檬奶油醬，口感細膩。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="3"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">15分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 8st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-6-D7cvS45O.png" alt="香蒜橄欖油義大利麵"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">香蒜橄欖油義大利麵</div>
+            <div class=" text-text-grey limit-length ">
+            簡單食材打造的義式經典，蒜香濃郁、口感滑順。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="2"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">20分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 9st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-7-BhM_Qqyp.png" alt="日式親子丼"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">日式親子丼</div>
+            <div class=" text-text-grey limit-length ">
+            雞肉與雞蛋完美融合，醬汁甜鹹適中，日式 comfort food。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="4"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">45分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+  <!-- 10st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-8-BD8dz0Ee.png" alt="蘑菇奶油燉飯"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">蘑菇奶油燉飯</div>
+            <div class=" text-text-grey limit-length ">
+            奶油與帕瑪森起司融合，搭配鮮香蘑菇，口感細緻濃郁。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="3"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">20分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">2人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+<!-- 11st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-9-CXJG6Tpc.png" alt="川味麻辣牛肉鍋"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">川味麻辣牛肉鍋</div>
+            <div class=" text-text-grey limit-length ">
+            花椒與辣椒香氣濃烈，牛肉滑嫩，湯底濃郁帶勁。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="5"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">50分鐘</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">4人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+<!-- 12st Card -->
+<div class="col-12 col-md-6 col-lg-4 mb-md-12">
+    <div class="product_card"><a href="#" class="pdc_link">
+      <img src="/cookingmoment_final/assets/Image-10-C4HGBJa2.png" alt="東坡肉"  />
+      <div class="card_body d-flex flex-column justify-content-between">
+        <div
+          class="inner-size description-height d-flex flex-column justify-content-between"
+        >
+          <div class="d-flex flex-column justify-content-start mx-md-8 mb-md-12">
+            <div class="h4 text-text mb-4 mb-md-8 mt-md-8 ">東坡肉</div>
+            <div class=" text-text-grey limit-length ">
+            五花肉經慢火細燉至入口即化，醬汁濃郁香甜，肥而不膩的傳統名菜。
+            </div>
+          </div>
+          <div class="text-text-grey mx-md-8 mb-md-6">
+            難度：<span class="rating-stars pt-6" data-rating="5"></span>
+          </div>
+        </div>
+        <div class="inner-width d-flex flex-row justify-content-around mb-md-8">
+          <div class="d-flex align-items-center">
+            <div class="icon-clock mb-2 me-md-6 "></div> <span class="Body2 text-primary">1.5小時</span>
+          </div>
+          <div class="d-flex align-items-center">
+            <span class="icon-people mb-2 me-md-6"></span><span class="Body2 text-primary">6人份</span>
+          </div>
+        </div>
+      </div></a>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<ul class="d-flex justify-content-center list-unstyled ">
+  <li class="PageBtn disabled  mx-md-2">
+    <a href="#" aria-disabled="true" tabindex="-1"><i class="bi bi-chevron-left"></i></a>
+  </li>
+  <li class="PageBtn mx-md-2"><a href="#" class="active">1</a></li>
+  <li class="PageBtn mx-md-2"><a href="#">2</a></li>
+  <li class="PageBtn mx-md-2"><a href="#">3</a></li>
+  <li class="PageBtn mx-md-2"><a href="#">4</a></li>
+  <li class="PageBtn mx-md-2"><a href="#">5</a></li>
+  <li class="PageBtn mx-md-2">
+    <a href="#"><i class="bi bi-chevron-right"></i></a>
+  </li>
+</ul>
+
+</div>
+
+
+</div>
+</div>
+  
+
+   
+ <!-- footer -->
+      <div class="w-100 pt-18 pt-md-16 pb-8 bg-footer">
+  <div class="container pt-0 pt-md-8 d-flex flex-column align-content-center">
+    <!-- foot image 區 -->
+    <div class="d-flex justify-content-center mb-7 mb-md-20">
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、小"
+        class="d-block d-md-none"
+      />
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、大"
+        class="d-none d-md-block"
+      />
+    </div>
+    <!-- foot menu 區 -->
+    <div class="d-block py-4 footer-area">
+      <ul
+        class="footer-menu list-unstyled d-flex justify-content-evenly h5 text-primary"
+      >
+        <li class="mb-10 mb-md-0">客戶支援</li>
+        <li class="mb-10 mb-md-0">常見問題</li>
+        <li>聯絡我們</li>
+      </ul>
+    </div>
+    <!-- footer trad mark -->
+    <span class="Body2 text-text-grey m-auto">Copyright ©2025 此食此刻</span>
+  </div>
+</div>
+  </body>
+</html>
