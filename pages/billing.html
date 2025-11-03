@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>結帳流程頁面</title>
+  </head>
+  <body>
+    <!-- header -->
+    <%- include("./layout/header"); -%>
+
+    <div class="heading_top_offset">
+      <!-- billing -->
+      <%- include("./layout/billing/billing") -%>
+    </div>
+
+    <!-- footer -->
+    <%- include("./layout/footer"); -%>
+
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="/assets/js/tools.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
+  </body>
+</html>

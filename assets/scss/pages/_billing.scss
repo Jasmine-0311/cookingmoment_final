@@ -1,0 +1,256 @@
+// 導覽列 / 結帳資訊
+.billing-infor{
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    img{
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+// 收件人資訊
+.billing-user-infor{
+    border-top: 1px solid #E5E5E5;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.billing-user-infor-title{
+    display: flex;
+    flex-direction: column;
+
+    p{
+      width: 80px;
+    }
+}
+
+// 收件人資訊-姓名
+.billing-user-first-name{
+    max-width: 30%;
+}
+
+.billing-user-last-name{
+    max-width: 65%;
+}
+
+
+
+// 收件人資訊-E-mail
+.user-e-mail{
+    max-width: 100%;
+}
+
+
+// 付款資訊
+.billing-payment-infor{
+    border-top: 1px solid #E5E5E5;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+// 付款資訊-信用卡
+.card-payment-section {
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+#one-time-payment-credit:checked ~ .one-time-payment-section {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#revolving-payment:checked ~ .revolving-payment-section {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.card-payment-section {
+  max-width: 350px;
+}
+
+.credit-card-option {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.credit-card-option input[type="radio"] {
+  display: none;
+}
+
+.credit-card-option input[type="radio"]:checked + .credit-card-label {
+  border: solid 5px;border-color: #007bff;
+}
+
+.credit-card-label {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(117, 117, 117, 0.3);
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.8s;
+}
+
+.credit-card-label img {
+  width: 40px;
+  margin-right: 12px;
+}
+
+.credit-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.credit-card-name {
+  font-weight: bold;
+}
+
+.credit-card-number {
+  color: #757575;
+  font-size: 14px;
+}
+
+
+.add-credit-card-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.add-credit-card-btn img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+// 付款資訊-行動支付
+.mobile-payment-section-item{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.mobile-payment-section {
+//   display: none;
+  opacity: 0;
+  transform: translateY(8px);
+  visibility: hidden;
+  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s ease;
+
+
+}
+
+#mobile-payment:checked ~ .mobile-payment-section {
+//   display: block;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+
+}
+
+.mobile-payment-option {
+  margin-bottom: 12px;
+  position: relative; 
+}
+
+.mobile-payment-option input[type="radio"] {
+  display: none;
+}
+
+.mobile-payment-option input[type="radio"]:checked + .mobile-payment-label {
+  border-color: #476149 ;
+  background-color: $primary;
+  color: #FFFFFF;
+}
+
+.mobile-payment-label {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(117, 117, 117, 0.3);
+  padding: 10px;
+  margin-top: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.4s;
+}
+
+.mobile-payment-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+// 發票資訊
+.billing-receipt-infor{
+    border-top: 1px solid #E5E5E5;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.form-check-infor-input{
+    width: 300px;
+}
+
+.form-check-infor-section {
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#form-check-infor:checked ~ .form-check-infor-section {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-check-infor-disable{
+    display: none;
+}
+
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+// 結帳金額
+.billing-total-pay{
+    border-top: 1px solid #E5E5E5;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+// 排版
+.billing-container{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.billing-middle-content{
+    margin-left: 0px;
+}
+
+@media (min-width:768px) {
+    .billing-middle-content{
+        margin-left: 350px;
+    }
+}
