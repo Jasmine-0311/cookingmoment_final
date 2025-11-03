@@ -58,7 +58,7 @@ export function add_listener_for_index_category() {
   categoryMenuItems.forEach((card, index) => {
     const newElem = document.createElement("div");
     newElem.innerHTML = `<img
-      src="/CookingMoment/images/index/${card.src}"  
+      src="/cookingmoment_final/images/index/${card.src}"  
       data-category="${card.type}"
       class =  "category-item"
       alt="${card.type}.png" /> `;
@@ -98,9 +98,8 @@ export function add_listener_for_index_category() {
     if (currentIndex + 2 >= categoryMenuItems.length && diff < 0) return;
 
     currentTranslate = prevTranslate + diff;
-    category_menu.style.transform = `translateX(${
-      currentTranslate - currentIndex * countShiftX()
-    }px)`;
+    category_menu.style.transform = `translateX(${currentTranslate - currentIndex * countShiftX()
+      }px)`;
   }
 
   function dragEnd() {
