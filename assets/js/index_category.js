@@ -14,8 +14,6 @@ export function add_listener_for_index_category() {
   const category_indicator = document.getElementById(myConst.ellipsisId);
 
   function updateCategoryMenu() {
-    // call by
-    // 1. click  indicator
     prevTranslate = currentIndex * countShiftX();
     category_menu.style.transform = `translateX( -${prevTranslate}px)`;
 
@@ -31,7 +29,7 @@ export function add_listener_for_index_category() {
       category_menu.children[0].offsetLeft
     );
   }
-  const categoryCards = [
+  const categoryMenuItems = [
     {
       src: "category1_meat.png",
       type: "meat",
@@ -49,7 +47,7 @@ export function add_listener_for_index_category() {
       type: "vegetarian",
     },
     {
-      src: "category5_Ketogenic.png",
+      src: "category5_ketogenic.png",
       type: "ketogenic",
     },
     {
@@ -57,22 +55,28 @@ export function add_listener_for_index_category() {
       type: "all",
     },
   ];
-  categoryCards.forEach((card, index) => {
+  categoryMenuItems.forEach((card, index) => {
     const newElem = document.createElement("div");
+    const imgUrl = new URL(
+      `../../public/images/index/${card.src}`, 
+      import.meta.url
+    ).href;
+
     newElem.innerHTML = `<img
-      src="/CookingMoment/images/index/${card.src}"  
+      src="${imgUrl}"  
       data-category="${card.type}"
-      class =  "category-item"
+      class="category-item"
       alt="${card.type}.png" /> `;
     category_menu.appendChild(newElem);
   });
+
   //以蔬食類別(vegetable)為預設類型
   category_menu
     .querySelector('[data-category="vegetable"]')
     .classList.add("selected");
 
   // Add indicator
-  categoryCards.forEach((_, index) => {
+  categoryMenuItems.forEach((_, index) => {
     const indicatorElem = document.createElement("div");
     indicatorElem.className = myConst.ellipsisDotClassName;
     if (index == 0) indicatorElem.classList.add("active");
@@ -97,12 +101,11 @@ export function add_listener_for_index_category() {
 
     //滑動的限制 1. index已經最左，還向右拉 2.想向左拉時，應該填滿container 不要拉出空位
     if (currentIndex === 0 && diff > 0) return;
-    if (currentIndex + 2 >= categoryCards.length && diff < 0) return;
+    if (currentIndex + 2 >= categoryMenuItems.length && diff < 0) return;
 
     currentTranslate = prevTranslate + diff;
-    category_menu.style.transform = `translateX(${
-      currentTranslate - currentIndex * countShiftX()
-    }px)`;
+    category_menu.style.transform = `translateX(${currentTranslate - currentIndex * countShiftX()
+      }px)`;
   }
 
   function dragEnd() {
@@ -112,11 +115,11 @@ export function add_listener_for_index_category() {
 
     const movedBy = currentTranslate - prevTranslate;
 
-    if (movedBy < -100 && currentIndex < categoryCards.length - 1) {
+    if (movedBy < -100 && currentIndex < categoryMenuItems.length - 1) {
       let shiftN = Math.floor((movedBy * -1) / countShiftX()) + 1;
       currentIndex =
-        currentIndex + shiftN >= categoryCards.length
-          ? categoryCards.length - 1
+        currentIndex + shiftN >= categoryMenuItems.length
+          ? categoryMenuItems.length - 1
           : currentIndex + shiftN;
     }
 
