@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/cookingmoment_final/favicon.ico" />
+    <title>購物車</title>
+    <script type="module" crossorigin src="/cookingmoment_final/assets/main-fkhkrjp7.js"></script>
+    <link rel="stylesheet" crossorigin href="/cookingmoment_final/assets/main-B3nhSUUV.css">
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header fixed-top">
+  <div class="container position-relative">
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <!-- 左方logo -->
+      <div>
+        <a class="py-6 d-block d-md-none" href="">
+          <img src="/cookingmoment_final/assets/logo_small-dqC3dKT1.png" alt="此食此刻Logo 小" />
+        </a>
+        <a class="navbar-brand py-md-0 d-none d-md-block" href="./index.html">
+          <img src="/cookingmoment_final/assets/logo_big-CjHlcHsX.png" alt="此食此刻Logo 大" />
+        </a>
+      </div>
+
+      <!-- 中間自適應的div -->
+      <div class="flex-grow-1 mx-2 d-none d-md-block">
+        <div class="">
+          <ul
+            class="list-unstyled d-flex justify-content-evenly h5 text-primary"
+          >
+            <li>
+              <a class="text-decoration-none" href="https://jasmine-0311.github.io/CookingMoment/products.html">探索料理</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="#">餐桌故事</a>
+            </li>
+            <li>品牌故事</li>
+            <li>
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 右側 購物車、人像、menu漢堡按鈕 -->
+      <div class="d-flex align-items-center ">
+        <!-- 購物車 -->
+        <div class="position-relative pt-3 ">
+           <a href="https://jasmine-0311.github.io/CookingMoment/shoppingcart.html">
+          <span class="icon-cart mx-7 pt-5 z-2"></span>
+          <span
+            class="position-absolute bg-Accent text-white cart-tag rounded-pill py-1 px-2"
+            id="header-order-qty"
+          >
+            2
+          </span>
+         </a>
+        </div>
+
+        <!-- 人像 & user alias-->
+        <div
+          class="mx-7 flex-row"
+          id="header-login-status"
+          data-logined="true"
+          data-bs-target="#userOffCanvas"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div id="header-avatar" class="d-block">
+            <img
+              src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+              class="avatar rounded-circle"
+              alt="user avatar"
+            />
+            <span class="fs-7 text-primary">Jenny</span>
+          </div>
+          <a
+            href="#"
+            class="Body2 text-secondary text-decoration-none d-none"
+            id="header-toLogin"
+            >會員登入</a
+          >
+        </div>
+
+        <!-- menu 小版之下拉 功能清單 -->
+        <div class="mx-7 d-block d-md-none">
+          <button
+            class="border-0"
+            type="button"
+            id="header-menu-btn"
+            data-bs-toggle="dropdown"
+          >
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" id="header-menu-list">
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="https://jasmine-0311.github.io/CookingMoment/products.html">探索料理</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">品牌故事</li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- user profile  offcanvas  -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="header-userOffCanvas"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="p-10 d-flex justify-content-end">
+    <button
+      type="button"
+      id="header-close-usercanvas"
+      class="btn-close p-5 fs-8"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-7">
+    <div class="d-flex mb-5">
+      <img
+        src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+        alt="user picture"
+        class="d-block my-2 me-2 avatar border-1"
+      />
+      <div class="mb-10">
+        <p class="fs-7 text-primary fw-bolder m-0">Jessica</p>
+        <p class="fs-7 text-secondary">jenny@gamil.com</p>
+      </div>
+    </div>
+    <div class="h5 text-primary">
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> article </span>
+        <span class="">訂單管理</span>
+      </div>
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> favorite </span>
+        <span class="">我的收藏</span>
+      </div>
+      <div class="py-4">
+        <span class="material-icons-outlined align-bottom"> settings </span>
+        <span class="">帳號設定</span>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-footer p-7">
+    <div class="h5 py-4 text-primary">
+      <a href="" class="text-decoration-none" id="user-logout">
+        <span class="material-symbols-outlined"> logout </span>
+        <spanfs-8>登出</spanfs-8>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container heading_top_offset mb-14 mb-md-22">
+<div class="row g-0">
+
+ 
+
+ <!-- 麵包屑 -->
+   <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+    <li class="breadcrumb-item"><a href="index.html">探索料理</a></li>
+    <li class="breadcrumb-item text-primary active" aria-current="page">購物車</li>
+  </ol>
+</nav>
+
+        <h2 class="h-md-2 text-center mb-8 mb-md-30">購物車</h2>
+
+<div class="col-12 mb-30">
+<!--一鍵打包區-->
+<div class="d-flex mb-md-10 mt-md-30">
+    <span class="me-md-4">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATFSURBVHgBvVdrSGRlGP7mzMW7eRnvlxEmb3lJTQMvEfZD1kRDUZbATAhEjFWQEglbBJVCzYUY2bU/W+koKVRICpKL/VmbDdkoktwMdLGsVcpWA00dT88ze850smXbRccXDt933vN97+V53vf7ZoQ4gciyrHvE9ZI4qdBIQkLCVUz3JUnaNRqNzdDp1YD8/Px+4TQqKuprjAecR0ZGDqpr3FHX19c/87ARYZ1Bp9PJPj4+vzY0NGSUlpaW8x3ON2nY39//p/DwcMfMzIxfRETElwiwZXZ2NlSv1x/m5eXVuoz09/eboTjCxiMGoTxSZmbmc9HR0ddiY2Nf18LE0dfXtwdTrtcziKGhIevCwoIRul0vL6+PuWx6ejpQE6grucTExHcDAgIcrnc4dQYFBTUz4pqamie6uroSOWd0KSkpVwHZz4BStlqto7W1tedCQkI+NxgMh8yGQbS0tMSbTKbfVQcQJ/as8z0nJ6dNWwe5ubnPcy8Ssgmz2XwzIyNjAHB8FBYWNofvzuTk5G44Pujs7AznxsnJSXN8fPx1QPtHaGjo9bm5OW8l89tpaWlvqYaBXso9/27K5N7e3kQVSSqIBBMT5eXlLwCeu+A4gZnhORofH9djdHIjEbHb7cGqsb6+vnCbzWZRspO13ANyM/dbLBY7ErFzP/XUgfNvFApfxPuhWFlZ8VYXKKPc1tb2NDOnor29/SmOyHRS/a4+dDw4OBincC2lpqaeB5RO1MWnSUlJn6DY9rkG9Fzhd9A1RgrLysoK3PwzEyh3Y2Jibubn578SHBx8Wy0mIgGY7zBzbYbQX6ThuLi48ywuoqRwOKpCy8oHJXfwbgQSHwKJSTcVKP/1goKCC+D4K3B2CZG/jUUL/BYYGHgLxbfo7r9/t5UEqvLoDHTtoF7eoV4pPJ2mG2QkMozEZNAY5jaQnp5+Gf3myM7OvggntzBeASyzKCL/4zzezzkCv0ZU1OCQwBso2FJ1DW0gKDuq/wBcv+nOGG1SQJjr6uqKEf2fqOD30HNTeF6DkR8edDTSGTNhEXZ0dFipU4qPfS1XVFTU0jFtsEsYoHszoeGi7u7uGI4oDhuK4zM8H4CTqQdlDCpe5R6sq6+srHxWiwTgb1Z471B0TMA5MDDwuIERj42N+fBDcXExz1Th7e19d3NzMxDwf7G1tXWBlQsK/nOcotL3cVzampqaKgoLC7+lrrq62sJxdHRUgK7flpaWdD09Pe8jGcv8/PwuPkmtra0/CkQ6I461iScfHs1A6YZQ8Jc0VfhIV93DiNamevDQoVhdXTUp1StPTEyc/M48Jqpt5dVEn0oQspFco8ceu1+/nlRokwcUx+XlZS+qdCwk9NgScF8XZyBra2vWvb29eIPT6RTb29s87v6C/tT5PSY8wXY2Njbu1RPTJwwo+6hT+V103BtsKzecfnFx0SQUvmXlhhLinwI4VeE163Ymyy6O3e2kic7T7STRpwE/UxzKpe8SKMVpi9Ym57j5ZnU8tEtKSs4VFRV9J85AHA7Hk1MQzl0cE46srKxLHiouCTfeZeWEdHGsdaLb2dlJEJ4R/oyJEJridZ2bjY2N+VVVVd+LM5Dh4eHkkZGRGwIQvKQ5S8/kwV+Zlz3SPv8n9Pk3x0akyk4vs0sAAAAASUVORK5CYII=" alt="一鍵打包" />
+    </span>
+    <h4 class="h4  me-4">一鍵打包</h4>
+</div>
+<!-- 卡片 番茄炒蛋 -->
+<div class="row mb-md-10 ">
+ <div class="col-lg-12 col-12">
+<!-- 頭欄 -->
+   <div class="d-flex CartCard-head  ">
+    <div class="col-lg-4 h-md-6 Body2 text-center col-12">名稱</div>
+      <div class="col-lg-2 h6 text-center d-none d-md-block">單價</div>
+      <div class="col-lg-2 h6 text-center d-none d-md-block">數量</div>
+      <div class="col-lg-2 h6 text-start ms-md-16 d-none d-md-block">小計</div>
+  </div>
+  
+  <div class="accordion acCard-border  px-md-0 px-md-6 " id="Tomato">
+  <div class="accordion-item">
+  <!-- 品項列 -->
+  
+   <div class="d-flex  align-items-center">
+            <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center ">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 col-9 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/%E7%95%AA%E8%8C%84%E7%82%92%E8%9B%8B-pQeDreUu.png" class="me-md-6" alt="蕃茄炒蛋" width="80" height="80">
+              <div. class="">
+                <h5 class="h5 text-primary mb-md-6">蕃茄炒蛋 </h5>
+                <div class="text-text-grey">兩人份</div>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              59元
+             </div>
+             
+  <!-- 數量（± 按鈕） -->
+  
+      <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="2" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              118元
+             </div>
+             <div class=" d-flex col-lg-2 justify-content-center align-items-center">
+      <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTomato" aria-expanded="true" aria-controls="collapseTomato">
+         <p class="Body2 text-text-grey mb-md-0">展開食材</p></button>    
+  </div>
+  </div>
+ <div id="collapseTomato" class="accordion-collapse collapse show" data-bs-parent="#Tomato">
+      </div>
+    </div>
+
+  </div>
+         
+ </div> 
+ 
+</div>
+<!--卡片 烤雞腿 -->
+<div class="row mb-md-24 ">
+
+ <div class="col-lg-12 col-12">
+  <!-- 頭欄 -->
+   <div class="d-flex CartCard-head ">
+    <div class="col-lg-4 h-md-6 text-center col-12 Body2">名稱</div>
+      <div class="col-lg-2 h6 text-center d-none d-md-block">單價</div>
+      <div class="col-lg-2 h6 text-center d-none d-md-block">數量</div>
+      <div class="col-lg-2 h6 text-start ms-md-16 d-none d-md-block">小計</div>
+  </div>
+<!-- 卡片標題按鈕處 --> 
+<div class="accordion acCard-border" id="accordionExample">
+  <div class="accordion-item">
+<!-- 品項列 -->
+   <div class="col-lg-12 my-md-4 col-12">
+   <div class="d-flex  align-items-center">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/Image-DBAHWz76.png" class="me-md-6 d-flex align-items-start" alt="檸香烤雞腿" width="80" height="80">
+              <div. class="">
+                <h5 class="h5 text-primary mb-md-6"> 檸香烘烤雞腿</h5>
+                <div class="text-text-grey">兩人份</div>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              230元
+             </div>  
+  <!-- 數量（± 按鈕） -->
+      <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              230元
+             </div>
+
+  <!--烤雞腿卡片按鈕 -->
+      <button class="accordion-button my-md-4 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <h2 class="Body2 text-text-grey mb-md-0">展開食材</h2>
+      </button>
+    </div>
+   </div>
+
+     <!-- 卡片內容 -->
+  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+    <div class="accordion-body py-md-0 px-md-0">
+        <!-- 冷凍配送的部分 -->
+         <div class="accordion " id="deliverySection">
+  <div class="accordion-item">
+ 
+      <div class="d-flex justify-content-center align-items-center mb-6">
+        
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-deliverySection" aria-expanded="true" aria-controls="panelsStayOpen-deliverySection">
+         <h5 class="Body2  mb-3">冷凍配送</h5>
+        </button>
+
+      </div>
+    
+    <div id="panelsStayOpen-deliverySection" class="accordion-collapse collapse show">
+      <div class="accordion-body py-md-0 px-md-0 my-md-6 ">
+        <!-- 品項列 -->
+    
+    <div class="d-flex  align-items-center">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/Gemini_Generated_Image_lgskowlgskowlgsk-CaCDM1A2.png" class="me-md-6" alt="雞腿" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">雞腿 </h5>
+                <p class="text-text-grey mb-md-0">兩入</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              120元
+             </div>
+             
+    <!-- 數量（± 按鈕） -->
+      <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              120元
+    </div>
+    </div>
+
+   </div>
+   </div>
+  </div>
+  </div>
+
+  <!-- 冷藏配送 -->
+  <div class="accordion " id="deliverySection">
+  <div class="accordion-item">
+ 
+      <div class="d-flex justify-content-center align-items-center mb-6">
+        
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-deliverySectionTwo" aria-expanded="true" aria-controls="panelsStayOpen-deliverySectionTwo">
+         <h5 class="Body2  mb-3">冷藏／常溫配送</h5>
+        </button>
+
+      </div>
+    
+    <div id="panelsStayOpen-deliverySectionTwo" class="accordion-collapse collapse show">
+      <div class="accordion-body py-md-0 px-md-0 my-md-6 ">
+        <!-- 品項列 檸檬 -->
+       <div class="d-flex  align-items-center py-md-6">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/cristina-anne-costello-4jsmBl30x_A-unsplash-43nJIvji.png" class="me-md-6" alt="檸檬" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">檸檬 </h5>
+                <p class="text-text-grey mb-md-0">兩顆</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              40元
+             </div>     
+        <!-- 數量（± 按鈕） -->
+        <div class="col-lg-2 text-center my-md-6">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+       </div>
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              40元
+        </div>
+    </div>
+ <!-- 品項列 迷迭香 -->
+      <div class="d-flex  align-items-center py-md-6">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/Gemini_Generated_Image_cepuujcepuujcepu-BIgeF_sq.png" class="me-md-6" alt="迷迭香" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">新鮮迷迭香 </h5>
+                <p class="text-text-grey mb-md-0">約20g</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              50元
+             </div>     
+        <!-- 數量（± 按鈕） -->
+        <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+       </div>
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              50元
+        </div>
+    </div>
+ <!-- 品項列 蒜仁 -->
+     <div class="d-flex  align-items-center py-md-6">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/%E8%92%9C%E4%BB%81-FXcDTfEN.png" class="me-md-6" alt="新鮮蒜仁" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">新鮮蒜仁 </h5>
+                <p class="text-text-grey mb-md-0">5g</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              10元
+             </div>     
+        <!-- 數量（± 按鈕） -->
+        <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+       </div>
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              10元
+        </div>
+    </div>
+ <!-- 品項列 海鹽 -->
+     <div class="d-flex  align-items-center py-md-6">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/%E6%B5%B7%E9%B9%BD-DXZvrSmz.png" class="me-md-6" alt="海鹽" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">海鹽 </h5>
+                <p class="text-text-grey mb-md-0">5g（非整罐商品）</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              5元
+             </div>     
+        <!-- 數量（± 按鈕） -->
+        <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+       </div>
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              5元
+        </div>
+    </div>
+ <!-- 品項列 黑胡椒 -->
+     <div class="d-flex  align-items-center my-md-6">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/Gemini_Generated_Image_wmjbyewmjbyewmjb-DdmnnJFz.png" class="me-md-6" alt="黑胡椒" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">黑胡椒 </h5>
+                <p class="text-text-grey mb-md-0">5g（非整罐商品）</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              5元
+             </div>     
+        <!-- 數量（± 按鈕） -->
+        <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+       </div>
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              5元
+        </div>
+    </div>
+
+   </div>
+   </div>
+  </div>
+  </div>
+  <!-- 烤雞卡片內容分隔線 -->
+</div>
+</div>
+
+ </div>
+</div>
+
+</div>
+</div>
+<!--單獨選購區 -->
+<div class="d-flex mb-md-10 mt-md-30">
+    <span class="me-md-4">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN0SURBVHgBrZZbiE9RFMa/vxlCybhE5C7k9uISIeVBNFI8kAd3xYsnl1BEygNCSkLIJUqIBzyQRCSF5BYil4mHmZhhZjAzZsb3zV5nzv6f2ec/NPPVr7PP2fustfZt7Q20njKGVO9RFWrcBi2XbPQhX0idffvjBVJlbRTEO9JVDfLRMmXMYS2ZTBaTO6TCbHcgJeQVWUPukffkI1oo9WQlXG+6mLNi8pt0Ir1JDXlB8sgQazsTrSA5z5jBkeZcQ96TjIYbdmm6tQHitdBqinqu4R5OppHTZLDVZfxoW1PdyDdy18oa6ifkLeJRySkF1J4sItvIXO97LmmYl5iDU+SqlTXMeUkHIaeHyC8yCm4VFpqB9Uh3LsNHyQlymdwnV8z5dbIDCedJrSXPAg70/pOMRzjYA+QSaYvsxZMxh4/IVqQsrObmQVvkR8rP+q8MrndICa4+rUIq8Qwr0t5enR+YPyJKFMVoXpXJDzJYBLfxdyfqklFesm+3Ec+ZFtV3hKUAJ5BxcBkuq0KGChEng1yOo56us3L0XouwFJQW2bmkrZOekUjqyWgvKD1nWlATkH36FKYEGFJWm5ocjVbbcy9c4lcAPchTa6OtMsrKWvG7yD6yNGCvHdz6aVA+0k8ofX8ON+8DSWe4HFxK+sP1fgT5YO2LLKAKKyc1DHHADSoPNEoe6lJHuB7riNN8VlrdG2t7kMwO2Imk0VvvV24kZ5E9xzpltLo111HWKrHnKs+gnvPhpmsWOYam+gQ3KhqJsX5Fnhmd5H3TMN9CfNZKvchrNF31Cvgx3Fn7OVEn2wVw01SKxLRGSSFpUO/byBYra4HNQ1gTyX7kXtnBurqUxspGHa2sXDsopZ3OYN0yqszBhUS98nclUqJJy7+RXpLuCEvBabp0Ig0O1Gv+zyc/ZuyHZWh6IvmOH8Jto5A0hzo+FyC8wK6RqaEfoww1B9k99x3L4AyENYbcgDssKjwbZ0g10tNpo7Tx33nv1V55uhkKaSdZHgg2Ulp2zJL/o7bUFO9dkYdWvwznWfk43JUp0iayHc1IPyoTLTRDfclXz6jmMXkDGQq3RyVNmS4L5YhPrn85PBp/VuPNVtY22WOO862up7UtsPcCq99ADluAutquIDfxH7dZNTwCt79VvmgOtBf7IU6f6ukAuIuh3h8gHh1NS1ma07+wENDPG86awQAAAABJRU5ErkJggg==" alt="單獨選購" />
+    </span>
+    <h4 class="h4  me-4">單獨選購</h4>
+</div>
+<!-- 卡片 單獨選購 -->
+ <div class="row  mb-md-30 ">
+
+ <div class="col-lg-12 col-12">
+  <!-- 頭欄 -->
+   <div class="d-flex CartCard-head ">
+    <div class="col-lg-4 h-md-6 Body2 text-center col-12">名稱</div>
+      <div class="col-lg-2 h6 text-center d-none d-md-block">單價</div>
+      <div class="col-lg-2 h6 text-center d-none d-md-block">數量</div>
+      <div class="col-lg-2 h6 text-start ms-md-16 d-none d-md-block">小計</div>
+  </div>
+     <!-- 卡片內容 -->
+  
+  <!-- 冷藏配送 -->
+  <div class="accordion acCard-border " id="deliverySection">
+  <div class="accordion-item">
+ 
+      <div class="d-flex justify-content-center align-items-center mb-6">
+        
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-deliverySectionThree" aria-expanded="true" aria-controls="panelsStayOpen-deliverySectionThree">
+         <h5 class="Body2  mb-3">冷藏／常溫配送</h5>
+        </button>
+
+      </div>
+    
+    <div id="panelsStayOpen-deliverySectionThree" class="accordion-collapse collapse show">
+      <div class="accordion-body py-md-0 px-md-0 my-md-6 ">
+        <!-- 品項列 韓式泡菜-原味 -->
+       <div class="d-flex  align-items-center py-md-6">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/kimchi-Ck8cj5ux.png" class="me-md-6" alt="韓式泡菜-原味" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">韓式泡菜-原味（小辣） </h5>
+                <p class="text-text-grey mb-md-0">450g</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              260元
+             </div>     
+        <!-- 數量（± 按鈕） -->
+        <div class="col-lg-2 text-center my-md-6">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+       </div>
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              260元
+        </div>
+    </div>
+ <!-- 品項列 海鹽 -->
+     <div class="d-flex  align-items-center py-md-6">
+            <div class="col-lg-1 d-flex align-items-center justify-content-center">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+              <img src="/cookingmoment_final/assets/%E6%B5%B7%E9%B9%BD-DXZvrSmz.png" class="me-md-6" alt="海鹽" width="48" height="48">
+              <div. class="">
+                <h5 class="h5">海鹽 </h5>
+                <p class="text-text-grey mb-md-0">300g</p>
+              </div>
+             <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              125元
+             </div>     
+        <!-- 數量（± 按鈕） -->
+        <div class="col-lg-2 text-center">
+          <div class="d-flex align-items-center text-center">
+        <div class="input-group input-group-sm mx-auto" >
+          <button class="btn  qty-minus text-text-grey " type="button">−</button>
+          <input type="number" class=" text-center qty" value="1" min="1" step="1">
+          <button class="btn text-text-grey qty-plus" type="button">+</button>
+        </div>
+      </div>
+       </div>
+      <div class="col-lg-2 d-flex justify-content-center align-items-center">
+              125元
+        </div>
+    </div>
+
+
+   </div>
+   </div>
+  </div>
+  </div>
+  <!-- 卡片內容分隔線 -->
+ </div>
+ </div>
+<!--下方卡片-->
+
+<div class="row d-flex justify-content-between ">
+
+
+<!--左下卡片-->
+
+<div class="col-lg-8 mb-30">
+<div class="BuyNote-card">
+
+<div class="mb-md-10 mt-md-10">
+<h5 class="h5  mb-md-6 mt-md-4">配送​時效</h5>
+<ul class="list-unstyled ">
+  <li class="px-md-12 Body2 mb-md-2">下單後​ 3-5 個​工作​天​送達。​</li>
+  <li class="px-md-12 Body2">如​遇假日​或​特殊​節慶，​配送​時效​可能​延長。​</li>
+</ul>
+</div>
+<div class="mb-md-10">
+<h5 class="h5  mb-md-6 mt-md-4">​保存​方式​</h5>
+<ul class="list-unstyled ">
+  <li class="px-md-12 Body2 mb-md-2">冷藏​商品​請於​收到​後 立即冷藏 0–7°​C ​保存。​​​</li>
+  <li class="px-md-12 Body2">冷​凍​商品​請於​收到​後 立即冷凍 ​-18°C ​以​下 ​保存。​​</li>
+</ul>
+</div>
+<div class="mb-md-10">
+<h5 class="h5  mb-md-6 mt-md-4">同​日​送​達</h5>
+<ul class="list-unstyled ">
+  <li class="px-md-12 Body2 mb-md-2">若訂單內含冷藏與​冷凍​商品，​系統​會​自動​分為​不同​溫層​包裹。​​</li>
+  <li class="px-md-12 Body2">我​們會​安排於同​一​天​送達，​但​包裹​可能​由​不同​配送員同時​或​前後​抵達。​​</li>
+</ul>
+</div>
+<div class="mb-md-10">
+<h5 class="h5  mb-md-6 mt-md-4">免運條件</h5>
+<ul class="list-unstyled ">
+  <li class="px-md-12 Body2 mb-md-2">會員​全​館​消費​滿1​,​200​元​即​可​免運。​</li>
+  <li class="px-md-12 Body2">未​達免​運門檻，​將​依各​溫層​收取​運費。​</li>
+</ul>
+</div>
+<div class="mb-md-10">
+<h5 class="h5  mb-md-6 mt-md-4">​注意​事項​</h5>
+<ul class="list-unstyled ">
+  <li class="px-md-12 Body2 mb-md-2">為確​保食​材​新鮮，​若當日​未​能​成功​收貨，​物流​可能​會延​遲​至​隔日​再​送。​​​</li>
+  <li class="px-md-12 Body2">一​鍵​打包​之​調​味品​皆為​小​包裝、​依食譜​所​需份量，​非整罐​銷售。​​​</li>
+</ul>
+</div>
+
+</div>
+  
+</div>
+
+<!--右下卡片-->
+
+  <div class="col-lg-4">
+  <div class="OrderSummary-card">
+
+    <h5 class="h5 text-primary py-md-10 px-md-12">費用計算</h5>
+    <div class="d-flex justify-content-between align-items-center  px-md-12 border-bottom py-md-10">
+      <div class="Body2">商品小計</div>
+      <div class="Body2">733元</div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center  px-md-12 border-bottom py-md-10">
+      <div class="Body2">運費</div>
+      <div class="Body2">200元</div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center  px-md-12  py-md-10">
+      <div class="h5">總額</div>
+      <div class="h5">1053元</div>
+    </div>
+<div class="d-flex justify-content-end align-items-center  px-md-12  py-md-10">
+  <a href="https://iris175.github.io/CookingMoment/billing.html" class="text-reset text-decoration-none link-underline-none"> 
+  <button class="btn btn-small shadow" type="button">
+        前往結帳</button>
+        </a>
+</div>
+
+  </div>
+  </div>
+
+
+</div>
+<!-- 主要內容col-12的div -->
+</div>
+<!-- 外層容器的div -->
+</div>
+</div>
+
+
+
+      <!-- footer -->
+      <div class="w-100 pt-18 pt-md-16 pb-8 bg-footer">
+  <div class="container pt-0 pt-md-8 d-flex flex-column align-content-center">
+    <!-- foot image 區 -->
+    <div class="d-flex justify-content-center mb-7 mb-md-20">
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、小"
+        class="d-block d-md-none"
+      />
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、大"
+        class="d-none d-md-block"
+      />
+    </div>
+    <!-- foot menu 區 -->
+    <div class="d-block py-4 footer-area">
+      <ul
+        class="footer-menu list-unstyled d-flex justify-content-evenly h5 text-primary"
+      >
+        <li class="mb-10 mb-md-0">客戶支援</li>
+        <li class="mb-10 mb-md-0">常見問題</li>
+        <li>聯絡我們</li>
+      </ul>
+    </div>
+    <!-- footer trad mark -->
+    <span class="Body2 text-text-grey m-auto">Copyright ©2025 此食此刻</span>
+  </div>
+</div>
+  </body>
+</html>
