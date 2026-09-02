@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/cookingmoment_final/favicon.ico" />
+    <title>結帳流程頁面</title>
+    <script type="module" crossorigin src="/cookingmoment_final/assets/main-Cxao2Imv.js"></script>
+    <link rel="stylesheet" crossorigin href="/cookingmoment_final/assets/main-DAwQGaL6.css">
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header fixed-top">
+  <div class="container position-relative">
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <!-- 左方logo -->
+      <div>
+        <a class="py-6 d-block d-md-none" href="./index.html">
+          <img src="/cookingmoment_final/assets/logo_small-dqC3dKT1.png" alt="此食此刻Logo 小" />
+        </a>
+        <a class="navbar-brand py-md-0 d-none d-md-block" href="./index.html">
+          <img src="/cookingmoment_final/assets/logo_big-CjHlcHsX.png" alt="此食此刻Logo 大" />
+        </a>
+      </div>
+
+      <!-- 中間自適應的div -->
+      <div class="flex-grow-1 mx-2 d-none d-md-block">
+        <div class="">
+          <ul
+            class="list-unstyled d-flex justify-content-evenly h5 text-primary"
+          >
+            <li>
+              <a class="text-decoration-none" href="./products.html">探索料理</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li>品牌故事</li>
+            <li>
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 右側 購物車、人像、menu漢堡按鈕 -->
+      <div class="d-flex align-items-center">
+        <!-- 購物車 -->
+        <div class="position-relative pt-3">
+          <a href="./shoppingcart.html"><span class="icon-cart mx-7 pt-5 z-2"></span></a>
+          <span
+            class="position-absolute bg-Accent text-white cart-tag rounded-pill py-1 px-2"
+            id="header-order-qty"
+          >
+            2
+          </span>
+        </div>
+
+        <!-- 人像 & user alias-->
+        <div
+          class="mx-7 flex-row"
+          id="header-login-status"
+          data-logined="true"
+          data-bs-target="#userOffCanvas"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div id="header-avatar" class="d-block">
+            <img
+              src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+              class="avatar rounded-circle"
+              alt="user avatar"
+            />
+            <span class="fs-7 text-primary">Jenny</span>
+          </div>
+          <a
+            href="#"
+            class="Body2 text-secondary text-decoration-none d-none"
+            id="header-toLogin"
+            >會員登入</a
+          >
+        </div>
+
+        <!-- menu 小版之下拉 功能清單 -->
+        <div class="mx-7 d-block d-md-none">
+          <button
+            class="border-0"
+            type="button"
+            id="header-menu-btn"
+            data-bs-toggle="dropdown"
+          >
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" id="header-menu-list">
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="https://jasmine-0311.github.io/CookingMoment/products.html">探索料理</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">品牌故事</li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- user profile  offcanvas  -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="header-userOffCanvas"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="p-10 d-flex justify-content-end">
+    <button
+      type="button"
+      id="header-close-usercanvas"
+      class="btn-close p-5 fs-8"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-7">
+    <div class="d-flex mb-5">
+      <img
+        src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+        alt="user picture"
+        class="d-block my-2 me-2 avatar border-1"
+      />
+      <div class="mb-10">
+        <p class="fs-7 text-primary fw-bolder m-0">Jessica</p>
+        <p class="fs-7 text-secondary">jenny@gamil.com</p>
+      </div>
+    </div>
+    <div class="h5 text-primary">
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> article </span>
+        <span class="">訂單管理</span>
+      </div>
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> favorite </span>
+        <span class="">我的收藏</span>
+      </div>
+      <div class="py-4">
+        <span class="material-icons-outlined align-bottom"> settings </span>
+        <span class="">帳號設定</span>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-footer p-7">
+    <div class="h5 py-4 text-primary">
+      <a href="" class="text-decoration-none" id="user-logout">
+        <span class="material-symbols-outlined"> logout </span>
+        <spanfs-8>登出</spanfs-8>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <div class="heading_top_offset">
+      <!-- billing -->
+      <div class="container billing-container">
+  <!-- 導覽列 / 結帳資訊 -->
+  <section class="pt-md-30 pb-md-30 pt-18 pb-18">
+    <div class="billing-infor d-flex align-items-center mb-16">
+      <a href="https://jasmine-0311.github.io/CookingMoment/index.html" class="text-reset text-decoration-none link-underline-none"><p class="Body2 Body2-md text-text-grey mt-md-2 mb-md-2 mb-0">首頁</p></a>
+      <img src="data:image/svg+xml,%3csvg%20width='8'%20height='15'%20viewBox='0%200%208%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0.360006%200.600118C0.200006%200.813451%200.120006%201.02678%200.120006%201.24012C0.120006%201.45345%200.200006%201.66678%200.360006%201.88012L5.80001%207.32012L0.360006%2012.6801C0.253339%2012.8401%200.200006%2013.0401%200.200006%2013.2801C0.200006%2013.5201%200.266673%2013.7201%200.400006%2013.8801C0.533339%2014.0401%200.733339%2014.1201%201.00001%2014.1201C1.26667%2014.1201%201.45334%2014.0401%201.56001%2013.8801L7.56%207.88012C7.77334%207.66678%207.88%207.45345%207.88%207.24012C7.88%207.02678%207.77334%206.81345%207.56%206.60012L1.56001%200.600118C1.45334%200.440118%201.26667%200.360118%201.00001%200.360118C0.733339%200.360118%200.520006%200.440118%200.360006%200.600118Z'%20fill='%23757575'/%3e%3c/svg%3e" alt="next-page" class="text-text-grey ms-4 me-4">
+      <p class="Body2 Body2-md text-text-grey mt-md-2 mb-md-2 mb-0">探索料理</p>
+      <img src="data:image/svg+xml,%3csvg%20width='8'%20height='15'%20viewBox='0%200%208%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0.360006%200.600118C0.200006%200.813451%200.120006%201.02678%200.120006%201.24012C0.120006%201.45345%200.200006%201.66678%200.360006%201.88012L5.80001%207.32012L0.360006%2012.6801C0.253339%2012.8401%200.200006%2013.0401%200.200006%2013.2801C0.200006%2013.5201%200.266673%2013.7201%200.400006%2013.8801C0.533339%2014.0401%200.733339%2014.1201%201.00001%2014.1201C1.26667%2014.1201%201.45334%2014.0401%201.56001%2013.8801L7.56%207.88012C7.77334%207.66678%207.88%207.45345%207.88%207.24012C7.88%207.02678%207.77334%206.81345%207.56%206.60012L1.56001%200.600118C1.45334%200.440118%201.26667%200.360118%201.00001%200.360118C0.733339%200.360118%200.520006%200.440118%200.360006%200.600118Z'%20fill='%23757575'/%3e%3c/svg%3e" alt="next-page" class="text-text-grey ms-4 me-4 mb-0">
+      <p class="h6 h-md-6 text-primary mb-0">結帳資訊</p>
+    </div>
+
+    <h1 class="h2 h-md-2 text-center">結帳資訊</h1>
+  </section>
+
+  <!-- 收件人資訊 -->
+  <section class="billing-user-infor">
+    <div class="ms-md-55 ms-0">  
+      <p class="h4 h-md-5 text-primary mb-6">收件人資訊</p>
+      <button class="btn btn-small mb-md-16 mb-10" type="button">同會員資料</button>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="billing-user-infor-title me-md-20 me-20">
+            <p class="h6 h-md-6 pt-5 mb-16">姓名</p>
+            <p class="h6 h-md-6 pt-5 mb-16">聯絡電話</p>
+            <p class="h6 h-md-6 pt-5 mb-16">Email</p>
+            <p class="h6 h-md-6 pt-5 mb-16">收件地址</p>
+            <p class="h6 h-md-6 pt-5 mb-16">配送時段</p>
+            <p class="h6 h-md-6 mb-0">有無管理室</p>
+        </div>
+
+        <div class="billing-user-infor-input">
+          <!-- 姓名 -->
+          <div class="d-flex justify-content-between mb-12">
+            <input class="form-control billing-user-first-name" type="text" placeholder="姓氏" aria-label="default input example">
+
+            <input class="form-control billing-user-last-name" type="text" placeholder="名字" aria-label="default input example">
+          </div>
+
+          <!-- 聯絡電話 -->
+          <input class="form-control receiving-address mb-12" type="tel" placeholder="請輸入聯絡電話" aria-label="default input example">
+          
+          <!-- E-mail -->
+          <!-- <label for="user-e-mail" class="form-label user-e-mail mb-0"> 
+          </label> -->
+          <input type="email" class="form-control mb-12" id="user-e-mail" placeholder="ex: 123456@gmail.com">
+
+          <!-- 收件地址 -->
+          <input class="form-control receiving-address mb-12" type="text" placeholder="請輸入收件地址" aria-label="default input example">
+
+          <!-- 配送時段 -->
+          <select class="form-select delivery-time delivery-time-select mb-8" aria-label="Default select example">
+            <option selected>（請選擇配送時段）</option>
+            <option value="morning">早上：9:00 ～ 12:00</option>
+            <option value="afternoon">下午：13:00 ～ 17:00</option>
+            <option value="evening">晚上：18:00 ～ 20:00</option>
+            <option value="no-limit">不限配送時段</option>
+          </select>
+
+          <!-- 有無管理室 -->
+          <div class="d-flex align-items-center">
+            <div class="form-check security-office me-10 mb-0">
+              <input class="form-check-input" type="radio" name="security-office" id="yes-security-office" checked>
+              <label class="form-check-label Body2 Body2-md" for="yes-security-office">
+                有
+              </label>
+            </div>
+            
+            <div class="form-check security-office mb-0">
+              <input class="form-check-input" type="radio" name="security-office" id="no-security-office" checked>
+              <label class="form-check-label Body2 Body2-md" for="no-security-office">
+                無
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+    </div>  
+  </section>
+
+  <!-- 付款資訊 -->
+  <section class="billing-payment-infor">
+    <div class="ms-md-55 ms-0">
+      <p class="h4 h-md-5 text-primary mb-16">付款資訊</p>
+      <div>
+        <p class="h6 h-md-6 ms-md-16 mb-md-16">付款方式</p>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column billing-middle-content">
+      <!-- 信用卡一次付清 -->
+      <div class="form-check mb-md-8">
+        <input class="form-check-input" type="radio" name="PaymentRadio" id="one-time-payment-credit">
+        <label class="form-check-label Body2 Body2-md mb-10" for="one-time-payment-credit">
+          信用卡一次付清
+        </label>
+
+
+        <div class="card-payment-section one-time-payment-section">
+          <div class="credit-card-option">
+            <input type="radio" name="credit-card" id="card-1" checked>
+            <label for="card-1" class="credit-card-label mt-md-8">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-credit-card'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M0%204a2%202%200%200%201%202-2h12a2%202%200%200%201%202%202v8a2%202%200%200%201-2%202H2a2%202%200%200%201-2-2zm2-1a1%201%200%200%200-1%201v1h14V4a1%201%200%200%200-1-1zm13%204H1v5a1%201%200%200%200%201%201h12a1%201%200%200%200%201-1z'/%3e%3cpath%20d='M2%2010a1%201%200%200%201%201-1h1a1%201%200%200%201%201%201v1a1%201%200%200%201-1%201H3a1%201%200%200%201-1-1z'/%3e%3c/svg%3e" alt="Visa" class="ms-md-10 me-md-20">
+              <div class="credit-card-info">
+                <div class="credit-card-name">中國信託銀行</div>
+                <div class="credit-card-number">****_****_**** 3333</div>
+              </div>
+            </label>
+          </div>
+
+          <div class="credit-card-option">
+            <input type="radio" name="credit-card" id="card-2">
+            <label for="card-2" class="credit-card-label">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-credit-card'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M0%204a2%202%200%200%201%202-2h12a2%202%200%200%201%202%202v8a2%202%200%200%201-2%202H2a2%202%200%200%201-2-2zm2-1a1%201%200%200%200-1%201v1h14V4a1%201%200%200%200-1-1zm13%204H1v5a1%201%200%200%200%201%201h12a1%201%200%200%200%201-1z'/%3e%3cpath%20d='M2%2010a1%201%200%200%201%201-1h1a1%201%200%200%201%201%201v1a1%201%200%200%201-1%201H3a1%201%200%200%201-1-1z'/%3e%3c/svg%3e" alt="JCB" class="ms-md-10 me-md-20">
+              <div class="credit-card-info">
+                <div class="credit-card-name">台北富邦銀行</div>
+                <div class="credit-card-number">****_****_**** 1111</div>
+              </div>
+            </label>
+          </div>
+
+          <div class="credit-card-option">
+            <input type="radio" name="credit-card" id="card-3">
+            <label for="card-3" class="credit-card-label">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-credit-card'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M0%204a2%202%200%200%201%202-2h12a2%202%200%200%201%202%202v8a2%202%200%200%201-2%202H2a2%202%200%200%201-2-2zm2-1a1%201%200%200%200-1%201v1h14V4a1%201%200%200%200-1-1zm13%204H1v5a1%201%200%200%200%201%201h12a1%201%200%200%200%201-1z'/%3e%3cpath%20d='M2%2010a1%201%200%200%201%201-1h1a1%201%200%200%201%201%201v1a1%201%200%200%201-1%201H3a1%201%200%200%201-1-1z'/%3e%3c/svg%3e" alt="Visa" class="ms-md-10 me-md-20">
+              <div class="credit-card-info">
+                <div class="credit-card-name">國泰世華銀行</div>
+                <div class="credit-card-number">****_****_**** 2222</div>
+              </div>
+            </label>
+          </div>
+
+          <button class="add-credit-card-btn credit-card-label mb-md-8 mb-10">
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='%23007bff'%20class='bi%20bi-plus-circle'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M8%2015A7%207%200%201%201%208%201a7%207%200%200%201%200%2014m0%201A8%208%200%201%200%208%200a8%208%200%200%200%200%2016'/%3e%3cpath%20d='M8%204a.5.5%200%200%201%20.5.5v3h3a.5.5%200%200%201%200%201h-3v3a.5.5%200%200%201-1%200v-3h-3a.5.5%200%200%201%200-1h3v-3A.5.5%200%200%201%208%204'/%3e%3c/svg%3e" alt="新增">
+            新增其他信用卡
+          </button>
+
+          <!-- 安全碼 -->
+          <label for="credit-security-code-infor" class="form-label">安全碼</label>
+          <input type="text" class="form-check-infor-input form-control mb-20" id="credit-security-code-infor" placeholder="CVC">
+        </div>          
+      </div>
+
+      <!-- 信用卡分期付款 -->
+      <div class="form-check mb-md-8">
+        <input class="form-check-input" type="radio" name="PaymentRadio" id="revolving-payment" checked>
+        <label class="form-check-label Body2 Body2-md mb-10" for="revolving-payment">
+          信用卡分期付款
+        </label>
+
+        <div class="card-payment-section revolving-payment-section">
+          <div class="credit-card-option">
+            <input type="radio" name="credit-card" id="revolving-card-1" checked>
+            <label for="revolving-card-1" class="credit-card-label mt-md-8">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-credit-card'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M0%204a2%202%200%200%201%202-2h12a2%202%200%200%201%202%202v8a2%202%200%200%201-2%202H2a2%202%200%200%201-2-2zm2-1a1%201%200%200%200-1%201v1h14V4a1%201%200%200%200-1-1zm13%204H1v5a1%201%200%200%200%201%201h12a1%201%200%200%200%201-1z'/%3e%3cpath%20d='M2%2010a1%201%200%200%201%201-1h1a1%201%200%200%201%201%201v1a1%201%200%200%201-1%201H3a1%201%200%200%201-1-1z'/%3e%3c/svg%3e" alt="Visa" class="ms-md-10 me-md-20">
+              <div class="credit-card-info">
+                <div class="credit-card-name">中國信託銀行</div>
+                <div class="credit-card-number">****_****_**** 3333</div>
+              </div>
+            </label>
+          </div>
+
+          <div class="credit-card-option">
+            <input type="radio" name="credit-card" id="revolving-card-2">
+            <label for="revolving-card-2" class="credit-card-label">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-credit-card'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M0%204a2%202%200%200%201%202-2h12a2%202%200%200%201%202%202v8a2%202%200%200%201-2%202H2a2%202%200%200%201-2-2zm2-1a1%201%200%200%200-1%201v1h14V4a1%201%200%200%200-1-1zm13%204H1v5a1%201%200%200%200%201%201h12a1%201%200%200%200%201-1z'/%3e%3cpath%20d='M2%2010a1%201%200%200%201%201-1h1a1%201%200%200%201%201%201v1a1%201%200%200%201-1%201H3a1%201%200%200%201-1-1z'/%3e%3c/svg%3e" alt="JCB" class="ms-md-10 me-md-20">
+              <div class="credit-card-info">
+                <div class="credit-card-name">台北富邦銀行</div>
+                <div class="credit-card-number">****_****_**** 1111</div>
+              </div>
+            </label>
+          </div>
+
+          <div class="credit-card-option">
+            <input type="radio" name="credit-card" id="revolving-card-3">
+            <label for="revolving-card-3" class="credit-card-label">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-credit-card'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M0%204a2%202%200%200%201%202-2h12a2%202%200%200%201%202%202v8a2%202%200%200%201-2%202H2a2%202%200%200%201-2-2zm2-1a1%201%200%200%200-1%201v1h14V4a1%201%200%200%200-1-1zm13%204H1v5a1%201%200%200%200%201%201h12a1%201%200%200%200%201-1z'/%3e%3cpath%20d='M2%2010a1%201%200%200%201%201-1h1a1%201%200%200%201%201%201v1a1%201%200%200%201-1%201H3a1%201%200%200%201-1-1z'/%3e%3c/svg%3e" alt="Visa" class="ms-md-10 me-md-20">
+              <div class="credit-card-info">
+                <div class="credit-card-name">國泰世華銀行</div>
+                <div class="credit-card-number">****_****_**** 2222</div>
+              </div>
+            </label>
+          </div>
+
+          <button class="add-credit-card-btn credit-card-label mb-md-8 mb-10">
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='%23007bff'%20class='bi%20bi-plus-circle'%20viewBox='0%200%2016%2016'%3e%3cpath%20d='M8%2015A7%207%200%201%201%208%201a7%207%200%200%201%200%2014m0%201A8%208%200%201%200%208%200a8%208%200%200%200%200%2016'/%3e%3cpath%20d='M8%204a.5.5%200%200%201%20.5.5v3h3a.5.5%200%200%201%200%201h-3v3a.5.5%200%200%201-1%200v-3h-3a.5.5%200%200%201%200-1h3v-3A.5.5%200%200%201%208%204'/%3e%3c/svg%3e" alt="新增">
+            新增其他信用卡
+          </button>
+
+          <!-- 安全碼 -->
+          <label for="credit-security-code-infor" class="form-label">安全碼</label>
+          <input type="text" class="form-check-infor-input form-control mb-md-8 mb-10" id="credit-security-code-infor" placeholder="CVC">
+
+          <!-- 分期 -->
+          <div class="revolving-payment-time d-flex mb-md-20">
+            <div class="form-check me-md-8 me-10">
+              <input class="form-check-input" type="radio" name="revolving-payment-time" id="revolving-payment-time-6" checked>
+              <label class="form-check-label Body2 Body2-md" for="revolving-payment-time-6">
+                6期
+              </label>
+            </div>
+            
+            <div class="form-check me-md-8 me-10">
+              <input class="form-check-input" type="radio" name="revolving-payment-time" id="revolving-payment-time-9" checked>
+              <label class="form-check-label Body2 Body2-md" for="revolving-payment-time-9">
+                9期
+              </label>
+            </div>
+
+            <div class="form-check me-md-8 me-10">
+              <input class="form-check-input" type="radio" name="revolving-payment-time" id="revolving-payment-time-12" checked>
+              <label class="form-check-label Body2 Body2-md" for="revolving-payment-time-12">
+                12期
+              </label>
+            </div>
+
+            <div class="form-check me-md-8">
+              <input class="form-check-input" type="radio" name="revolving-payment-time" id="revolving-payment-time-24" checked>
+              <label class="form-check-label Body2 Body2-md mb-md-0 mb-20" for="revolving-payment-time-24">
+                24期
+              </label>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <!-- 行動支付 -->
+      <div class="form-check mb-md-8">
+        <input class="form-check-input" type="radio" name="PaymentRadio" id="mobile-payment" checked>
+        <label class="form-check-label Body2 Body2-md" for="mobile-payment">
+          行動支付
+        </label>
+
+        <div class="mobile-payment-section">
+          <div class="mobile-payment-section-item mb-md-0 mb-10">  
+            <div class="mobile-payment-option">
+              <input type="radio" name="mobile-payment" id="mobile-payment-1" checked>
+              <label for="mobile-payment-1" class="mobile-payment-label">
+                <div class="mobile-payment-info">
+                  <div class="mobile-payment-name h6 h-md-6 mb-0">臺灣Pay</div>
+                </div>
+              </label>
+            </div>
+
+            <div class="mobile-payment-option">
+              <input type="radio" name="mobile-payment" id="mobile-payment-2">
+              <label for="mobile-payment-2" class="mobile-payment-label">
+                <div class="mobile-payment-info">
+                  <div class="mobile-payment-name h6 h-md-6 mb-0">Line Pay</div>
+                </div>
+              </label>
+            </div>
+
+            <div class="mobile-payment-option">
+              <input type="radio" name="mobile-payment" id="mobile-payment-3">
+              <label for="mobile-payment-3" class="mobile-payment-label">
+                <div class="mobile-payment-info">
+                  <div class="mobile-payment-name h6 h-md-6 mb-0">Apple Pay</div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 銀聯卡 -->
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="PaymentRadio" id="donation-receipt" checked>
+        <label class="form-check-label Body2 Body2-md" for="donation-receipt">
+          銀聯卡
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- 發票資訊 -->
+  <section class="billing-receipt-infor">
+    <div class="ms-md-55">
+      <div>
+        <p class="h4 h-md-5 text-primary mb-16">發票資訊</p>
+      </div>
+    </div>
+
+
+    <div class="d-flex flex-column billing-middle-content">
+    <!-- 會員載具 -->
+      <div class="form-check mb-8">
+        <input class="form-check-input" type="radio" name="ReceiptRadio" id="member-carrier">
+        <label class="form-check-label Body2 Body2-md" for="member-carrier">
+          會員載具
+        </label>
+      </div>
+
+      <!-- 手機載具 -->
+      <div class="form-check mb-8">
+        <input class="form-check-input" type="radio" name="ReceiptRadio" id="form-check-infor" checked>
+        <label class="form-check-label Body2 Body2-md mb-4" for="form-check-infor">
+          手機載具
+        </label>
+
+        <div class="form-check-infor-section">
+          <label for="mobile-carrier-infor" class="form-label form-check-infor-disable"></label>
+          <input type="text" class="form-check-infor-input form-control mb-md-8 mb-10" id="mobile-carrier-infor" placeholder="ex: /jsijwoj">
+        </div>
+      </div>
+
+      <!-- 公司發票 -->
+      <div class="form-check mb-8">
+        <input class="form-check-input" type="radio" name="ReceiptRadio" id="form-check-infor" checked>
+        <label class="form-check-label Body2 Body2-md mb-4" for="form-check-infor">
+          公司發票
+        </label>
+
+        <div class="form-check-infor-section">
+          <label for="company-receipt-infor" class="form-label form-check-infor-disable"></label>
+          <input type="number" class="form-check-infor-input form-control mb-md-8 mb-10" id="company-receipt-infor" placeholder="請輸入統一編號 ex: 03799401">
+        </div>
+      </div>
+
+      <!-- 捐贈發票 -->
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="ReceiptRadio" id="form-check-infor" checked>
+        <label class="form-check-label Body2 Body2-md mb-4" for="form-check-infor">
+          捐贈發票
+        </label>
+
+        <div class="form-check-infor-section">
+          <label for="donation-receipt-infor" class="form-label form-check-infor-disable"></label>
+          <input type="text" class="form-check-infor-input form-control mb-md-8 mb-10" id="donation-receipt-infor" placeholder="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 結帳金額 -->
+  <section class="billing-total-pay">
+    <div class="d-flex align-items-center justify-content-between justify-content-md-around h4 h-md-4 ms-md-30 mb-0">
+      <p class="mb-0">結帳金額</p>
+      <p class="mb-0">$1,053</p>
+      <a href="./orders.html" class="text-reset text-decoration-none link-underline-none">
+        <button class="btn btn-secondary d-none d-md-block mt-md-4" type="button"><p class="h4 h-md-4 mb-0">確認結帳</p></button>
+        <button class="btn btn-small d-block d-md-none mt-md-4" type="button"><p class="h4 h-md-4 mb-0">確認結帳</p></button>
+    </a>
+    </div>
+  </section>
+</div>
+    </div>
+
+    <!-- footer -->
+    <div class="w-100 pt-18 pt-md-16 pb-8 bg-footer">
+  <div class="container pt-0 pt-md-8 d-flex flex-column align-content-center">
+    <!-- foot image 區 -->
+    <div class="d-flex justify-content-center mb-7 mb-md-20">
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、小"
+        class="d-block d-md-none"
+      />
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、大"
+        class="d-none d-md-block"
+      />
+    </div>
+    <!-- foot menu 區 -->
+    <div class="d-block py-4 footer-area">
+      <ul
+        class="footer-menu list-unstyled d-flex justify-content-evenly h5 text-primary"
+      >
+        <li class="mb-10 mb-md-0">客戶支援</li>
+        <li class="mb-10 mb-md-0">常見問題</li>
+        <li>聯絡我們</li>
+      </ul>
+    </div>
+    <!-- footer trad mark -->
+    <span class="Body2 text-text-grey m-auto">Copyright ©2025 此食此刻</span>
+  </div>
+</div>
+
+  </body>
+</html>

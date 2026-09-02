@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/cookingmoment_final/favicon.ico" />
+    <title>結帳完成頁面</title>
+    <script type="module" crossorigin src="/cookingmoment_final/assets/main-Cxao2Imv.js"></script>
+    <link rel="stylesheet" crossorigin href="/cookingmoment_final/assets/main-DAwQGaL6.css">
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header fixed-top">
+  <div class="container position-relative">
+    <div class="d-flex w-100 align-items-center justify-content-between">
+      <!-- 左方logo -->
+      <div>
+        <a class="py-6 d-block d-md-none" href="./index.html">
+          <img src="/cookingmoment_final/assets/logo_small-dqC3dKT1.png" alt="此食此刻Logo 小" />
+        </a>
+        <a class="navbar-brand py-md-0 d-none d-md-block" href="./index.html">
+          <img src="/cookingmoment_final/assets/logo_big-CjHlcHsX.png" alt="此食此刻Logo 大" />
+        </a>
+      </div>
+
+      <!-- 中間自適應的div -->
+      <div class="flex-grow-1 mx-2 d-none d-md-block">
+        <div class="">
+          <ul
+            class="list-unstyled d-flex justify-content-evenly h5 text-primary"
+          >
+            <li>
+              <a class="text-decoration-none" href="./products.html">探索料理</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li>品牌故事</li>
+            <li>
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 右側 購物車、人像、menu漢堡按鈕 -->
+      <div class="d-flex align-items-center">
+        <!-- 購物車 -->
+        <div class="position-relative pt-3">
+          <a href="./shoppingcart.html"><span class="icon-cart mx-7 pt-5 z-2"></span></a>
+          <span
+            class="position-absolute bg-Accent text-white cart-tag rounded-pill py-1 px-2"
+            id="header-order-qty"
+          >
+            2
+          </span>
+        </div>
+
+        <!-- 人像 & user alias-->
+        <div
+          class="mx-7 flex-row"
+          id="header-login-status"
+          data-logined="true"
+          data-bs-target="#userOffCanvas"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <div id="header-avatar" class="d-block">
+            <img
+              src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+              class="avatar rounded-circle"
+              alt="user avatar"
+            />
+            <span class="fs-7 text-primary">Jenny</span>
+          </div>
+          <a
+            href="#"
+            class="Body2 text-secondary text-decoration-none d-none"
+            id="header-toLogin"
+            >會員登入</a
+          >
+        </div>
+
+        <!-- menu 小版之下拉 功能清單 -->
+        <div class="mx-7 d-block d-md-none">
+          <button
+            class="border-0"
+            type="button"
+            id="header-menu-btn"
+            data-bs-toggle="dropdown"
+          >
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" id="header-menu-list">
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="https://jasmine-0311.github.io/CookingMoment/products.html">探索料理</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#table_story">餐桌故事</a>
+            </li>
+            <li class="dropdown-item h5 text-primary" href="">品牌故事</li>
+            <li class="dropdown-item h5 text-primary" href="">
+              <a class="text-decoration-none" href="#about_us">關於我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- user profile  offcanvas  -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="header-userOffCanvas"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="p-10 d-flex justify-content-end">
+    <button
+      type="button"
+      id="header-close-usercanvas"
+      class="btn-close p-5 fs-8"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-7">
+    <div class="d-flex mb-5">
+      <img
+        src="/cookingmoment_final/assets/avatar-1-cp2HwrEX.png"
+        alt="user picture"
+        class="d-block my-2 me-2 avatar border-1"
+      />
+      <div class="mb-10">
+        <p class="fs-7 text-primary fw-bolder m-0">Jessica</p>
+        <p class="fs-7 text-secondary">jenny@gamil.com</p>
+      </div>
+    </div>
+    <div class="h5 text-primary">
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> article </span>
+        <span class="">訂單管理</span>
+      </div>
+      <div class="py-4">
+        <span class="material-symbols-outlined align-bottom"> favorite </span>
+        <span class="">我的收藏</span>
+      </div>
+      <div class="py-4">
+        <span class="material-icons-outlined align-bottom"> settings </span>
+        <span class="">帳號設定</span>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-footer p-7">
+    <div class="h5 py-4 text-primary">
+      <a href="" class="text-decoration-none" id="user-logout">
+        <span class="material-symbols-outlined"> logout </span>
+        <spanfs-8>登出</spanfs-8>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <div class="heading_top_offset">
+      <!-- orders 1 -->
+      <div class="container orders-container">
+  <div class="row justify-content-center order-pt-md-16 order-pb-md-16 pt-18 pb-18">
+    <div class="col-12">  
+      <!-- 感謝訂購 banner -->
+      <section class="order-mb-md-32 mb-18">
+        <div class="orders-banner">
+          <div class="orders-banner-content d-flex flex-column align-items-center pt-md-20 pb-md-20 pt-16 pb-16">
+            <h1 class="h2 h-md-2 mb-md-16 mb-10">感謝您的訂購！</h1>
+            <h2 class="Body2 Body2-md mb-2">訂單編號<span class="h6 h-md-6">#1029384756</span></h2>
+            <h2 class="Body2 Body2-md mb-md-16 mb-10 text-center">訂單與發票資訊已寄到您的信箱：<span class="h5 h-md-5">wang.xiaoming@email.com</span></h2>
+            
+            <a href="https://jasmine-0311.github.io/CookingMoment/products.html" class="text-reset text-decoration-none link-underline-none">
+              <div class="btn btn-mid btn-other-recipe mb-0">
+                <h3 class="Body2 Body2-md mb-0">逛逛其他食譜</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <div class="col-md-8 col-12">
+      <!-- 訂單進度條 -->
+      <section>
+        <div class="d-flex justify-content-between mb-8">
+          <img src="data:image/png;base64,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" alt="訂單成立" class="ps-6">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAToSURBVHgBzVhNS1tZGD65+ZBkNFdzwamiMOkiXYh0M4NEmE03M4v5HW5cKX6CIIIgfi/Ejb9jNrPoQN3oooFuWmigulCwsU0xV8zVJmqf53pOuaaX5N6YpD5wc06Sc+55z/v9vgFRJ2ZnZw3LsvRIJJLQNC1+fX0dwc8h+XcZz0UgELDK5bLZ1taWX1payos6EPCzeGRkJGwYRhKHPnUQ4wm4gHVzc5MvFovZnZ2dotd9nggkYV1dXSkckFS/BYPBYqlU+ojRPDs7+9LT0/N1YWGBnBPz8/Ohk5OTX0KhUBRIhMPhJyAwpvZi37FXQmsSODMz8xQvTwnJMcyPrq6ujre3t32JDJfUccnfcMl++R4LQ3ZjY+NI1Evg9PT0gOLa7e1tHi99s7m5aYkHAARFc7lcShEKdTnEO98KPwRSpPF4/HcouYGnhJdl19bWDkUDMTc3l4Qknok7yRRisdieUhEnNLfNHR0daRIHrhWhQ3uNJo5YXFw8hN6+oi7jq35xcfGH27ofOKjESuIg0r2HirQWKPLT09M0jchN3Pc4OD4+3k/iKNZWECfPtMCMDKZlWH1yYmIi6UogXEMMC2itgjrXCuIUlpeXC3Dm722CNC1FN/UDgfBLKdwkSjfSDJ2rBeokPQWesGmaz+4RSO5h6OMcC7LiJ6G3t/cNR4pacdH+IPc4kntuoqVuwtoGhM/wprC6uvqvl3XURxjpEX3k+fk5w2nW5iBdCkeEIFfRSt2sizi/gA4eyzNtY9GYlVD36Fa2trZMt038X7QIzHroG6mLpE2DNzckER/FIwFoynGEROMhiFfnFzjJuvI1L5icnPxHzcGIt7W8BLKfAtZR3AZ10BYfFLMlfo9+DrE+Vm0N0zdxR1Mc6zV7cSKR8JxE+gWtmA9DGXWrvb097XTGLijxA7SFyUF7oVsm0WggIcjSAPBEnc64EkhkbQJ5GU20EDy4u7t7T8i462UPuUfOhcjyZnHRaSQoBWquZz7KkUmLBnZ/lRsj4pEApYFtF/TNGnzNOb90dnYmxCMBrNf2LCxbNcRf2/9hjHt9AazxJbLhl01cb8jRZF1YwITUPsFv79w2qGAPXfobQwjWGCgUCvZ/1JOVlZX/3Pb5Xa/AMpWOGhElr8mKv4yNMcY+Uf1mdomo6/oLZEAvOGcG1Kj1BLIZXeUGLG01uemAI1oZ/dU2s16gsyUXZLV3sL6+/q5R6wlV5rILwdEummjWuOVfnEMU//tpTTQSTJwVp6m3zE1tDtKB8qacox5+Ln4S3BLn75GEYUjc6aJRWVm1AmyxYOij7jnLju8EkosVlZVnt/NQULSy/8Oz71WUQefC3d3ds6GhoTDzsMvLy+7BwcFcJpMpiSaCxME405i20YiQK35w/h+s3LC/v/9peHjYYFOS/qiZRNKlIJINyZKiAOIylWtcsxmkQq9xG5NpEULgn83QSeoczkhLn5dn88htXdX229jY2IBKi/w0HauBIoVBPleVZC3fWLOBOTU11UejUR1SEgqfeYDUzBQ+wCgFV8ZAYDcIvLb1PLWAK5uOBDukrAQRyz9DVy2ka5bKhGU+F2aGhAvp8A6/OlvA5BrS/qyX/NNXE10RSvE4D/QCcozBAL3HAz+JsS8CnRgdHTXAGUOWrVEaFGsIRQzUosRcE/PPcCOm3562wjeePygQOVGRDwAAAABJRU5ErkJggg==" alt="運送中">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAS4SURBVHgBxVjNSxtbFL+ZfEiiZjQDvioKL8JLF0W6eQ+J0C7e6v0lblwpfoIggiCCHys3/jEPnpu4aKCbPmiguqhgY5tiRs1oE7W/33SujNNpcydO0gPJnUnux++ec+65v3MiokVZWloyLMvSE4lERtO09M3NTQI/x5y/G/hcRiIRq9FomF1dXZX19fWKaEEiQTpPTk7GDcPIYtFRFxglwQas29vbSq1WK+3t7dVUxykBJLD+/v4cFsjK36LRaK1er39Aa56dnX0eHBz8srq6Ss2JlZWV2MnJSXcsFktCMvF4/AkApuRYjDtWBdoU4OLi4igmzwlHY3h+f319fby7uxvIZNikjk3+jk2OOPNYaErb29vvRasAFxYWnkmt3d3dVTDp652dHUs8QgAoWS6XcxIo3OUIc74RQQDSpOl0+k84uYFPHZOVNjc3j0SIsry8nIUlnopvlqmmUqmCdBG3aH6De3t78wQHrdXgQ4WwwVHW1taO4Lf/0Zfxql9eXv7l1+87DUqzEhxMWnisSZsJTX56eprnIfIz9wMNzszMjBAczdoJcM6aFpRRxGMDpz47Ozub9QWI0JBCB55WQZ/rBDgpGxsbVQTztzYgTcsxTH0HEHEph50kGUba4XPNhD7JSIFP3DTNpw8AUntohvmMDiXxi2RoaOg1W5paatEGSO2xpfY6aVqv0B9hYjtwn5+fj94DZEhhiyuo46b1CgAes6UW2UbISnC88wwr8L1/RRtEBv7u7u43CMZms/64Xv9m2AHIgoZobmsPAD+INgjBycAPV3quMgaYymxh0bSGgTpfoMWW+JoKOPJFWghrvFIZB/ZTZYtxBn0wyRfEvlAPhxdckMBP+uZgSmO8ZvO0TCajTCK5eLP/WwXnSJ1fGB+nBu1448ck/ITXYU9Pz0uASLUJnACRtQEyaGsioCAH+QMMJAmQeS/IMMB5hQDvabrKgIGBgQIpkhdkmOCkC5G0aFjoC1+QQyRUBjPae0Fic+kwNYfUwN4059IQa8750tfXl1GdwAsS8e1lmGbF6bUjC9NWDRPa8Q9tOsgkbpB8D5PgIl4aTmtqoPRVB+0TEVAkSCehCo3gMk1lixulYlP+ubm5f4R9P8cKrVYAwhKkHDpM/EJyAzvMYPeHbFHKGBG/WGSayyoEWxvgxcWFTbOg2uEfBeBOiB9xtgEycjOj4jNokRLjaIf4Eef7mwR5KRE3SIu8mVUnhCUWNMP0PXfacQ+QWvRkVoHCzmOEpnXqP1z7QUYZdXfc398/Gx8fj5OHXV1dDYyNjZWLxWJdtFEIDoczj8cuHIxDnNx37v+j3gEHBwcfJyYmDN4MjEftBMmQgptsnOkuXqsAV/T28WUzyEtfYTcmrzFcgS/a4ZP0OazBXCjJQM/ikV+/n5bfpqenn8nsKkjR8WdCk+JAPpeZJM26tbX1/4/6Ny1gzs/PD/PQyAopgeq6fqiSnbnFyR55EdhxTrWsp1QC9hYdKayQMhPEXf4JvmqBrlmSCTt8Lk6GhA3piA6/uUvA1BpoWkmFxQcqokugNI97QRWhxngZgDceqqYXgQG6ZWpqyoBmDCdtTfJAMYeQYOAWdXJNPH9CGDGD1rSlfAWNTB9uxaPYYgAAAABJRU5ErkJggg==" alt="已送達" class="pe-6">
+        </div>
+
+        <div class="progress-bar mb-8">
+          <div class="progress-fill"></div>
+        </div>
+        
+        <div class="d-flex justify-content-between">
+          <p class="Body2 Body2-md text-primary order-ps-3 order-pe-3 mb-0">訂單成立</p>
+          <p class="Body2 Body2-md text-disable order-ps-11 order-pe-11 mb-0">運送中</p>
+          <p class="Body2 Body2-md text-disable order-ps-11 order-pe-11 mb-0">已送達</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+      <!-- orders 2 -->
+      <div class="container orders-container">
+  <div class="row justify-content-between pt-md-30 pb-md-30 pt-18 pb-18">
+    <div class="col-md-3 col-12">
+      <!-- 訂單資訊 -->
+      <section class="mb-24">
+        <div class="mb-md-16 mb-12">
+          <h1 class="h3 h-md-3 text-primary mb-0">訂單資訊</h1>
+        </div>
+
+        <div class="user-order-infor">
+          <div class="mb-8">
+            <p class="Body2 Body2-md text-text-grey mb-2">收件人</p>
+            <p class="h6 h-md-6 mb-0">王小明（0912-123-456）</p>
+          </div>
+
+          <div class="mb-8">
+            <p class="Body2 Body2-md text-text-grey mb-2">配送地址</p>
+            <p class="h6 h-md-6 mb-0">台北市信義區信義路五段7號101大樓 25樓</p>
+          </div>
+
+          <div class="mb-8">
+            <p class="Body2 Body2-md text-text-grey mb-2">配送方式</p>
+            <p class="h6 h-md-6 mb-0">低溫宅配</p>
+          </div>
+
+          <div class="mb-8">
+            <p class="Body2 Body2-md text-text-grey mb-2">預計配送日期</p>
+            <p class="h6 h-md-6 mb-0">2025.05.29<span class="ms-md-6 me-md-6">-</span>2025.06.25</p>
+          </div>
+
+          <div>
+            <p class="Body2 Body2-md text-text-grey mb-2">付款方式</p>
+            <p class="h6 h-md-6 mb-0">信用卡<span class="ms-md-6 me-md-6">-</span>末四碼1234</p>
+          </div>
+        </div>
+      </section>
+    </div>
+      
+    <div class="col-md-8 col-12">
+      <!-- 商品總覽 -->
+      <section>
+        <div class="mb-md-16 mb-12">
+          <h2 class="h3 h-md-3 text-primary mb-0">商品總覽</h2>
+        </div>
+
+      <!-- 一鍵打包 -->
+        <div class="pack-title d-flex align-items-center">
+          <img src="/cookingmoment_final/assets/pack-BfeOf-ue.png" alt="一鍵打包" class="m-8">
+          <p class="h4 h-md-4 mb-0">一鍵打包</p>
+        </div>
+      
+      <!-- 蕃茄炒蛋 -->
+      <div class="mb-10"> 
+        <div class="order-list-item bg-primary text-white h6 h-md-6">
+          <div class="order-list-item-name-title ms-6">
+            <p>名稱</p>
+          </div>
+          <div class="order-list-item-cost-title">
+            <p>單價</p>
+          </div>
+          <div class="order-list-item-cost-title">
+            <p>數量</p>
+          </div>
+          <div class="order-list-item-cost-title">
+            <p>小計</p>
+          </div>
+        </div>
+
+        <!-- 未展開 -->
+        <div class="trans-radious">
+          <div class="order-list-item-content d-flex align-items-center Body2 Body2-md">
+            <div class="order-items-name d-flex align-items-center">
+              <div>
+                <img src="/cookingmoment_final/assets/%E8%95%83%E8%8C%84%E7%82%92%E8%9B%8B-C9lDbpKD.png" alt="蕃茄炒蛋">
+              </div>
+              <div class="order-items-name-text">
+                <p class="h5 h-md-5 text-primary mb-0">蕃茄炒蛋</p>
+                <p class="Body2 Body2-md text-text-grey mb-0 mt-6 d-none d-md-block">兩人份</p>
+              </div>
+            </div>
+
+            <div class="order-items-cost-item ">
+              <div class="order-items-cost">
+                <p>59元</p>
+              </div>
+              <div class="order-items-cost">
+                <p>2</p>
+              </div>
+              <div class="order-items-cost">
+                <p>118元</p>
+              </div>
+
+              <div class="order-list-collapse-wrapper">
+                <button class="p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-order-list" aria-expanded="false" aria-controls="collapse-order-list">
+                  <div class="order-items-unfolded d-flex align-items-center">  
+                    <p class="Body2 Body2-md text-text-grey me-md-6 mb-0">展開食材</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABdSURBVHgBfcvRDYAwCATQ0to57CrdxBGaTtKNdBT2KAHlQ0MMSkLCXR7Qe99ijGv4GRHBhZmPlNJ+5fLhkIgq6NVaKzlnD+Ocs44xEO7GwQ/SAPbd4GCRO4p13/0JaM8rWHtgbWcAAAAASUVORK5CYII=" alt="展開食材" class="unfolded-arrow">
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- <div class="collapse" id="collapse-order-list">
+              <div class="card card-body">
+                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- 檸香烘烤雞腿 -->
+      <div class="mb-md-14 mb-12"> 
+        <div class="order-list-item bg-primary text-white h6 h-md-6">
+          <div class="order-list-item-name-title ms-6">
+            <p>名稱</p>
+          </div>
+          <div class="order-list-item-cost-title">
+            <p>單價</p>
+          </div>
+          <div class="order-list-item-cost-title">
+            <p>數量</p>
+          </div>
+          <div class="order-list-item-cost-title">
+            <p>小計</p>
+          </div>
+        </div>
+
+        <!-- 展開食材 -->
+        <div class="trans-radious">
+          <div class="order-list-item-content-openlist d-flex align-items-center Body2 Body2-md">
+            <div class="order-items-name d-flex align-items-center">
+              <div>
+                <img src="/cookingmoment_final/assets/%E6%AA%B8%E9%A6%99%E7%83%98%E7%83%A4%E9%9B%9E%E8%85%BF-DTEu7ufw.jpg" alt="檸香烘烤雞腿">
+              </div>
+              <div class="order-items-name-text">
+                <p class="h5 h-md-5 text-primary mb-0">檸香烘烤雞腿</p>
+                <p class="Body2 Body2-md text-text-grey mb-0 mt-6 d-none d-md-block">兩人份</p>
+              </div>
+            </div>
+
+            <div class="order-items-cost-item ">
+              <div class="order-items-cost">
+                <p>230元</p>
+              </div>
+              <div class="order-items-cost">
+                <p>1</p>
+              </div>
+              <div class="order-items-cost">
+                <p>230元</p>
+              </div>
+
+              <div class="order-list-collapse-wrapper">
+                <button class="p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-order-list-openlist" aria-expanded="false" aria-controls="collapse-order-list-openlist">
+                  <div class="order-items-unfolded d-flex align-items-center">  
+                    <p class="Body2 Body2-md text-text-grey me-md-6 mb-0">收合食材</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABdSURBVHgBfcvRDYAwCATQ0to57CrdxBGaTtKNdBT2KAHlQ0MMSkLCXR7Qe99ijGv4GRHBhZmPlNJ+5fLhkIgq6NVaKzlnD+Ocs44xEO7GwQ/SAPbd4GCRO4p13/0JaM8rWHtgbWcAAAAASUVORK5CYII=" alt="收合食材" class="unfolded-arrow">
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <div class="collapse show" id="collapse-order-list-openlist">
+              <!-- 冷凍配送 -->
+              <div>
+                <button class="order-list-collapse-wrapper-title p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-order-list-freezing" aria-expanded="false" aria-controls="collapse-order-list-freezing">
+                  <div class="order-items-freezing-unfolded-title d-flex align-items-center">
+                    <p class="Body2 Body2-md me-md-5 mb-0">冷凍配送</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABdSURBVHgBfcvRDYAwCATQ0to57CrdxBGaTtKNdBT2KAHlQ0MMSkLCXR7Qe99ijGv4GRHBhZmPlNJ+5fLhkIgq6NVaKzlnD+Ocs44xEO7GwQ/SAPbd4GCRO4p13/0JaM8rWHtgbWcAAAAASUVORK5CYII=" alt="冷凍配送" class="unfolded-arrow">
+                  </div>
+                </button>
+              </div>
+
+              <div class="collapse show" id="collapse-order-list-freezing">
+                <div class="order-list-item-content-small d-flex align-items-center Body2 Body2-md">
+                  <div class="order-items-name-small d-flex align-items-center">
+                    <div>
+                      <img src="/cookingmoment_final/assets/%E9%9B%9E%E8%85%BF-m3VpbABn.png" alt="雞腿" class="me-md-6">
+                    </div>
+                    <div class="order-items-name-text-small">
+                      <p class="h6 h-md-6 mb-0">雞腿</p>
+                      <p class="Body2 Body2-md text-text-grey mb-0">兩入</p>
+                    </div>
+                  </div>
+                  
+                  <div class="order-items-cost">
+                    <p>120元</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>1</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>120元</p>
+                  </div>          
+                </div>
+              </div>
+
+              <!-- 冷藏/常溫配送 -->
+              <div>
+                <button class="order-list-collapse-wrapper-title p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-order-list-refrigeration" aria-expanded="false" aria-controls="collapse-order-list-refrigeration">
+                  <div class="order-items-refrigeration-unfolded-title d-flex align-items-center">
+                    <p class="Body2 Body2-md me-md-5 mb-0">冷藏／常溫配送</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABdSURBVHgBfcvRDYAwCATQ0to57CrdxBGaTtKNdBT2KAHlQ0MMSkLCXR7Qe99ijGv4GRHBhZmPlNJ+5fLhkIgq6NVaKzlnD+Ocs44xEO7GwQ/SAPbd4GCRO4p13/0JaM8rWHtgbWcAAAAASUVORK5CYII=" alt="冷藏／常溫配送" class="unfolded-arrow">
+                  </div>
+                </button>
+              </div>
+
+              <div class="collapse show" id="collapse-order-list-refrigeration">
+                <div class="order-list-item-content-small d-flex align-items-center Body2 Body2-md">
+                  <div class="order-items-name-small d-flex align-items-center">
+                    <div>
+                      <img src="/cookingmoment_final/assets/%E6%AA%B8%E6%AA%AC-DwpFYOO-.jpg" alt="檸檬" class="me-md-6">
+                    </div>
+                    <div class="order-items-name-text-small">
+                      <p class="h6 h-md-6 mb-0">檸檬</p>
+                      <p class="Body2 Body2-md text-text-grey mb-0">兩顆</p>
+                    </div>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>40元</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>1</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>40元</p>
+                  </div>          
+                </div>
+
+                <div class="order-list-item-content-small d-flex align-items-center Body2 Body2-md">
+                  <div class="order-items-name-small d-flex align-items-center">
+                    <div>
+                      <img src="/cookingmoment_final/assets/%E6%96%B0%E9%AE%AE%E8%BF%B7%E8%BF%AD%E9%A6%99-C9PGG9lt.png" alt="新鮮迷迭香" class="me-md-6">
+                    </div>
+                    <div class="order-items-name-text-small">
+                      <p class="order-limit-length h6 h-md-6 mb-0">新鮮迷迭香</p>
+                      <p class="Body2 Body2-md text-text-grey mb-0">約20g</p>
+                    </div>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>50元</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>1</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>50元</p>
+                  </div>          
+                </div>
+
+                <div class="order-list-item-content-small d-flex align-items-center Body2 Body2-md">
+                  <div class="order-items-name-small d-flex align-items-center">
+                    <div>
+                      <img src="/cookingmoment_final/assets/%E6%96%B0%E9%AE%AE%E8%92%9C%E4%BB%81-Dd1MrprX.png" alt="新鮮蒜仁" class="me-md-6">
+                    </div>
+                    <div class="order-items-name-text-small">
+                      <p class="h6 h-md-6 mb-0">新鮮蒜仁</p>
+                      <p class="Body2 Body2-md text-text-grey mb-0">5g</p>
+                    </div>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>10元</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>1</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>10元</p>
+                  </div>          
+                </div>
+
+                <div class="order-list-item-content-small d-flex align-items-center Body2 Body2-md">
+                  <div class="order-items-name-small d-flex align-items-center">
+                    <div>
+                      <img src="/cookingmoment_final/assets/%E6%B5%B7%E9%B9%BD-BjjeIkXg.png" alt="海鹽" class="me-md-6">
+                    </div>
+                    <div class="order-items-name-text-small">
+                      <p class="h6 h-md-6 mb-0">海鹽</p>
+                      <p class="Body2 Body2-md text-text-grey mb-0">5g（非整罐商品）</p>
+                    </div>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>5元</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>1</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>5元</p>
+                  </div>          
+                </div>
+
+                <div class="order-list-item-content-small d-flex align-items-center Body2 Body2-md">
+                  <div class="order-items-name-small d-flex align-items-center">
+                    <div>
+                      <img src="/cookingmoment_final/assets/%E9%BB%91%E8%83%A1%E6%A4%92-PQcJy8ex.png" alt="黑胡椒" class="me-md-6">
+                    </div>
+                    <div class="order-items-name-text-small">
+                      <p class="h6 h-md-6 mb-0">黑胡椒</p>
+                      <p class="Body2 Body2-md text-text-grey mb-0">5g（非整罐商品）</p>
+                    </div>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>5元</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>1</p>
+                  </div>
+                  <div class="order-items-cost">
+                    <p>5元</p>
+                  </div>            
+                </div>
+              </div>
+          </div>    
+        </div>
+      </div>
+      
+      <!-- 單獨選購 -->
+      <div class="pack-title d-flex align-items-center">
+          <img src="/cookingmoment_final/assets/purchase-DVQ7u1te.png" alt="單獨選購" class="m-8">
+          <p class="h4 h-md-4 mb-0">單獨選購</p>
+      </div>
+
+      <div class="mb-md-16 mb-12"> 
+          <div class="order-list-item d-flex align-items-center bg-primary text-white h6 h-md-6">
+            <div class="order-list-item-name-title ms-6">
+              <p>名稱</p>
+            </div>
+            <div class="order-list-item-cost-title">
+              <p>單價</p>
+            </div>
+            <div class="order-list-item-cost-title">
+              <p>數量</p>
+            </div>
+            <div class="order-list-item-cost-title">
+              <p>小計</p>
+            </div>
+          </div>
+
+          <!-- 冷藏/常溫配送 -->
+          <div class="trans-radious">  
+            <div>
+              <button class="order-list-collapse-wrapper-title p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-order-list-purchase" aria-expanded="false" aria-controls="collapse-order-list-purchase">
+                <div class="order-items-refrigeration-unfolded-title d-flex align-items-center">
+                  <p class="Body2 Body2-md me-md-5 mb-0">冷藏／常溫配送</p>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABdSURBVHgBfcvRDYAwCATQ0to57CrdxBGaTtKNdBT2KAHlQ0MMSkLCXR7Qe99ijGv4GRHBhZmPlNJ+5fLhkIgq6NVaKzlnD+Ocs44xEO7GwQ/SAPbd4GCRO4p13/0JaM8rWHtgbWcAAAAASUVORK5CYII=" alt="冷藏／常溫配送" class="unfolded-arrow">
+                </div>
+              </button>
+            </div>
+
+            <div class="collapse show" id="collapse-order-list-purchase">
+              <div class="order-list-item-content-small d-flex align-items-center Body2 Body2-md">
+                <div class="order-items-name-small d-flex align-items-center">
+                  <div>
+                    <img src="/cookingmoment_final/assets/%E9%9F%93%E5%BC%8F%E6%B3%A1%E8%8F%9C-%E5%8E%9F%E5%91%B3%EF%BC%88%E5%B0%8F%E8%BE%A3%EF%BC%89-CE9_j3y2.jpg" alt="韓式泡菜-原味（小辣）" class="me-md-6">
+                  </div>
+                  <div class="order-items-name-text-small">
+                    <p class="order-limit-length h6 h-md-6 mb-0">韓式泡菜-原味（小辣）</p>
+                    <p class="Body2 Body2-md text-text-grey mb-0">450g</p>
+                  </div>
+                </div>
+                <div class="order-items-cost">
+                  <p>260元</p>
+                </div>
+                <div class="order-items-cost">
+                  <p>1</p>
+                </div>
+                <div class="order-items-cost">
+                  <p>260元</p>
+                </div>          
+              </div>
+
+              <div class="order-list-item-content-small d-flex align-items-center Body2-md">
+                <div class="order-items-name-small d-flex align-items-center">
+                  <div>
+                    <img src="/cookingmoment_final/assets/%E6%B5%B7%E9%B9%BD-BjjeIkXg.png" alt="海鹽" class="me-md-6">
+                  </div>
+                  <div class="order-items-name-text-small">
+                    <p class="h6 h-md-6 mb-0">海鹽</p>
+                    <p class="Body2 Body2-md text-text-grey mb-0">300g</p>
+                  </div>
+                </div>
+                <div class="order-items-cost">
+                  <p>125元</p>
+                </div>
+                <div class="order-items-cost">
+                  <p>1</p>
+                </div>
+                <div class="order-items-cost">
+                  <p>125元</p>
+                </div>            
+              </div>
+            </div>
+          </div>
+      </div>
+
+      
+
+      </section>
+    </div>
+    
+    <div class="col-md-3 col-12">
+    </div>
+
+    <!-- 總額 -->
+    <div class="col-md-8 col-12">
+      <div class="order-list-total-pay">
+        <div class="d-flex flex-column ">
+          <div class="order-list-total-item mb-2">
+            <p class="Body2 Body2-md mb-0">小計</p>
+          </div>
+
+          <div class="order-list-total-item mb-2">
+            <p class="Body2 Body2-md mb-0">運費</p>
+          </div>        
+
+          <div class="order-list-total-item">
+            <p class="h5 h-md-5 text-primary mb-0">總額</p>
+          </div>
+        </div>
+
+        <div class="ms-12">
+          <div class="order-list-total-item-num mb-2">
+            <p class="Body2 Body2-md mb-0">733元</p>
+          </div>
+
+          <div class="order-list-total-item-num mb-2">
+              <p class="Body2 Body2-md mb-0">200元</p>
+          </div>
+
+          <div class="order-list-total-item-num">
+              <p class="h5 h-md-5 text-primary mb-0">1,053元</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    </div>
+
+    <!-- footer -->
+    <div class="w-100 pt-18 pt-md-16 pb-8 bg-footer">
+  <div class="container pt-0 pt-md-8 d-flex flex-column align-content-center">
+    <!-- foot image 區 -->
+    <div class="d-flex justify-content-center mb-7 mb-md-20">
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、小"
+        class="d-block d-md-none"
+      />
+      <img
+        src="/cookingmoment_final/assets/logo_wide_small-DXH2n8rT.png"
+        alt="此食此刻logo 寬、大"
+        class="d-none d-md-block"
+      />
+    </div>
+    <!-- foot menu 區 -->
+    <div class="d-block py-4 footer-area">
+      <ul
+        class="footer-menu list-unstyled d-flex justify-content-evenly h5 text-primary"
+      >
+        <li class="mb-10 mb-md-0">客戶支援</li>
+        <li class="mb-10 mb-md-0">常見問題</li>
+        <li>聯絡我們</li>
+      </ul>
+    </div>
+    <!-- footer trad mark -->
+    <span class="Body2 text-text-grey m-auto">Copyright ©2025 此食此刻</span>
+  </div>
+</div>
+
+  </body>
+</html>
