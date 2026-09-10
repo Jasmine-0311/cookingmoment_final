@@ -2,7 +2,7 @@
 
 一個多人協作開發的純切版電商網站，從線稿發想到切版上線，完整走過一輪團隊合作流程。
 
-<a href="https://jasmine-0311.github.io/cookingmoment_final/index.html" target="_blank">** 🔗 此食此刻 **</a>
+<a href="https://jasmine-0311.github.io/cookingmoment_final/index.html" target="_blank"> 🔗 此食此刻 </a>
 ---
 
 ## 📌 專案簡介
